@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="./assets/look-01.jpg" data-resource-id="look01" />
+<meta name="ext-resource-dependency" content="./assets/look-02.jpg" data-resource-id="look02" />
+<meta name="ext-resource-dependency" content="./assets/look-03.jpg" data-resource-id="look03" />
+<template id="__bundler_thumbnail" data-bg-color="#08090b"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#08090b"/><text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" letter-spacing="24" fill="#e9eaec">OSSIDIANA</text></svg></template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#08090b;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{opacity:.7}::selection{background:oklch(0.52 0.19 262);color:#fff}</style>
+</helmet>
+<div ref="{{ rootRef }}" style="background:#08090b;color:#e9eaec;font-family:'Archivo',sans-serif">
+
+  <div data-curtain="1" style="position:fixed;inset:0;z-index:60;background:#050607;display:flex;align-items:center;justify-content:center;transform:translateY(0);will-change:transform">
+    <div data-intro="1" style="display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div style="display:flex;font-size:clamp(34px,6vw,84px);font-weight:500;font-stretch:125%;letter-spacing:.22em;padding-left:.22em">
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">O</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">S</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">S</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">I</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">D</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">I</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">A</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">N</span></span>
+        <span style="overflow:hidden;display:block"><span data-l="1" style="display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.77,0,.18,1)">A</span></span>
+      </div>
+      <div data-l="1" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:#7d8288;opacity:0;transition:opacity 1s">COLLEZIONE 01 · NOTTE</div>
+    </div>
+    <div data-wipe="1" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(40px,6vw,96px);font-weight:300">{{ wipeLabel }}</div>
+  </div>
+
+  <header style="position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:28px clamp(20px,4vw,56px);mix-blend-mode:difference;color:#e9eaec">
+    <a href="#" onClick="{{ goHero }}" style="font-size:18px;font-weight:600;font-stretch:125%;letter-spacing:.22em">OSSIDIANA</a>
+    <nav style="display:flex;gap:clamp(16px,2.6vw,40px);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500">
+      <a href="#" onClick="{{ goManifesto }}">Manifesto</a>
+      <a href="#" onClick="{{ goCollezione }}">Collezione</a>
+      <a href="#" onClick="{{ goAtelier }}">Atelier</a>
+      <a href="#">Borsa (0)</a>
+    </nav>
+  </header>
+
+  <div style="position:fixed;left:clamp(20px,4vw,56px);bottom:28px;z-index:40;display:flex;gap:14px;align-items:baseline;mix-blend-mode:difference;color:#e9eaec;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em">
+    <span data-ch-n="1">01</span><span style="width:40px;height:1px;background:#e9eaec;align-self:center"></span><span data-ch-l="1" style="text-transform:uppercase">Notte</span>
+  </div>
+
+  <section data-sec="hero" style="height:220vh;position:relative">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden">
+      <img data-hero-img="1" src="assets/hero-atelier.png" alt="Interno dell'atelier Ossidiana" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transform:scale(1.12);will-change:transform">
+      <div data-hero-dim="1" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,7,.55) 0%,rgba(5,6,7,.2) 40%,rgba(5,6,7,.9) 100%)"></div>
+      <div data-hero-title="1" style="position:absolute;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(80px,12vh,140px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+        <div data-hero-in="1" style="display:flex;flex-direction:column;gap:28px;opacity:0;transform:translateY(40px);transition:opacity 1.4s,transform 1.4s cubic-bezier(.2,.7,.2,1)">
+          <div style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#aeb3b8">Collezione 01 · Autunno Inverno 2026</div>
+          <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(56px,9vw,148px);line-height:.88;letter-spacing:-.02em;max-width:11ch;text-wrap:balance">Ciò che resta dopo la <i>luce</i>.</h1>
+          <a href="#" onClick="{{ goCollezione }}" style="align-self:flex-start;background:#e9eaec;color:#08090b;padding:17px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Entra nella collezione</a>
+        </div>
+        <div data-hero-in="1" style="display:flex;flex-direction:column;align-items:center;gap:12px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#aeb3b8;opacity:0;transition:opacity 1.4s .3s">Scorri<span style="width:1px;height:56px;background:linear-gradient(#e9eaec,transparent)"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="manifesto" style="height:260vh;position:relative;background:#0f1013">
+    <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;gap:48px;padding:0 clamp(20px,8vw,140px);box-sizing:border-box">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#7d8288">CAPITOLO I — MANIFESTO</div>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4.6vw,76px);line-height:1.08;letter-spacing:-.01em;max-width:20ch;text-wrap:pretty;display:flex;flex-wrap:wrap;column-gap:.26em">
+        <sc-for list="{{ words }}" as="w" hint-placeholder-count="24"><span data-word="1" style="opacity:.12;transition:opacity .4s">{{ w }}</span></sc-for>
+      </p>
+    </div>
+  </section>
+
+  <section data-sec="collezione" style="height:420vh;position:relative;background:#08090b">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden">
+      <div data-track="1" style="display:flex;align-items:center;gap:6vw;height:100%;padding:0 8vw;width:max-content;will-change:transform">
+        <div style="width:min(80vw,520px);display:flex;flex-direction:column;gap:28px;flex-shrink:0">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#7d8288">CAPITOLO II — LA COLLEZIONE</div>
+          <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,7vw,112px);line-height:.9;letter-spacing:-.02em">Tre abiti.<br><i>Un solo nero.</i></h2>
+          <div style="font-size:15px;line-height:1.65;color:#9ca1a7;max-width:36ch;text-wrap:pretty">Organza, velluto e piuma. Ogni abito è cucito a mano e prodotto in pochi esemplari.</div>
+        </div>
+        <sc-for list="{{ looks }}" as="look" hint-placeholder-count="3">
+          <a href="#" onClick="{{ look.open }}" data-card="1" style="flex-shrink:0;display:flex;flex-direction:column;gap:18px;width:min(72vw,440px);opacity:1">
+            <div style="height:min(66vh,620px);overflow:hidden;background:#141518">
+              <img data-par="1" src="{{ look.src }}" alt="{{ look.name }}" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);will-change:transform">
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+              <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#7d8288">{{ look.n }}</span><span style="font-family:'Cormorant Garamond',serif;font-size:32px">{{ look.name }}</span></div>
+              <span style="font-size:13px;color:#c7cbcf">{{ look.price }}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#7d8288;letter-spacing:.02em"><span>{{ look.mat }}</span><span style="letter-spacing:.14em;text-transform:uppercase;font-size:10px;color:#e9eaec">Scopri →</span></div>
+          </a>
+        </sc-for>
+        <div style="width:10vw;flex-shrink:0"></div>
+      </div>
+      <div style="position:absolute;left:8vw;right:8vw;bottom:32px;height:1px;background:#23252a"><div data-bar="1" style="height:1px;width:100%;background:#e9eaec;transform-origin:left;transform:scaleX(0)"></div></div>
+    </div>
+  </section>
+
+  <section data-sec="velluto" style="height:260vh;position:relative;background:#08090b">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden">
+      <div data-clip="1" style="position:absolute;inset:0;clip-path:inset(22% 36% 22% 36%);will-change:clip-path">
+        <img data-clip-img="1" src="assets/look-02.jpg" alt="Abito Notturno" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;transform:scale(1.3);filter:grayscale(.35) brightness(.8)">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,6,7,.85),rgba(5,6,7,.1) 60%)"></div>
+      </div>
+      <div data-clip-pre="1" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,56px);pointer-events:none;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,7vw,120px)"><span>Vel</span><i>luto</i></div>
+      <div data-clip-text="1" style="position:absolute;left:clamp(20px,6vw,96px);top:50%;transform:translateY(-40%);opacity:0;display:flex;flex-direction:column;gap:26px;max-width:520px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#aeb3b8">CAPITOLO III — MATERIA</div>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6vw,100px);line-height:.92;letter-spacing:-.02em">Il velluto trattiene il <i>buio</i>.</h2>
+        <div style="font-size:15px;line-height:1.65;color:#c7cbcf;max-width:38ch;text-wrap:pretty">Velluto di seta tinto tre volte, finché assorbe la luce invece di rifletterla. Drappeggiato a mano sul corpo.</div>
+        <a href="#" onClick="{{ openVelluto }}" style="align-self:flex-start;border:1px solid rgba(233,234,236,.5);padding:16px 28px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Abito Notturno · € 2.650</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-sec="atelier" style="min-height:100vh;background:#0f1013;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);padding:clamp(100px,16vh,180px) clamp(20px,8vw,140px);box-sizing:border-box;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#7d8288">CAPITOLO IV — ATELIER</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6vw,100px);line-height:.92;letter-spacing:-.02em">Ogni abito si prova <i>in privato</i>.</h2>
+      <div style="font-size:15px;line-height:1.65;color:#9ca1a7;max-width:40ch;text-wrap:pretty">Riceviamo su appuntamento nel nostro atelier di Milano. Una stanza, una cliente, il tempo necessario.</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#" style="background:oklch(0.52 0.19 262);color:#fff;padding:17px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Prenota una prova</a>
+        <a href="#" style="border:1px solid rgba(233,234,236,.4);padding:17px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Via Borgonuovo, Milano</a>
+      </div>
+    </div>
+    <div style="height:min(80vh,720px);overflow:hidden"><img src="assets/look-01.jpg" alt="Abito Cenere" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:grayscale(.2) brightness(.85)"></div>
+  </section>
+
+  <footer style="background:#050607;padding:96px clamp(20px,4vw,56px) 40px;display:flex;flex-direction:column;gap:80px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:48px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300">Lettere dall'atelier</div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid #e9eaec;padding:14px 0;font-size:14px;color:#7d8288;max-width:420px"><span>La tua email</span><span style="color:#e9eaec;font-size:11px;letter-spacing:.16em;font-weight:600">ISCRIVITI</span></div>
+      </div>
+      <div style="display:flex;gap:40px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9ca1a7;justify-content:flex-end;flex-wrap:wrap"><a href="#">Instagram</a><a href="#">Spedizioni</a><a href="#">Contatti</a></div>
+    </div>
+    <div style="font-size:clamp(40px,11.5vw,220px);font-weight:600;font-stretch:125%;letter-spacing:.04em;line-height:.8;color:#141518;text-align:center;white-space:nowrap;overflow:hidden">OSSIDIANA</div>
+    <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:#5b6066;flex-wrap:wrap;gap:12px"><span>© 2026 OSSIDIANA</span><span>MILANO</span></div>
+  </footer>
+
+  <div data-ov="1" style="position:fixed;inset:0;z-index:50;pointer-events:none">
+    <div data-ov-bg="1" style="position:absolute;inset:0;background:#08090b;opacity:0"></div>
+    <img data-ov-img="1" src="assets/look-01.jpg" alt="" style="position:absolute;object-fit:cover">
+    <div data-ov-panel="1" style="position:absolute;right:0;top:0;bottom:0;width:50vw;box-sizing:border-box;padding:120px clamp(24px,5vw,80px) 48px;display:flex;flex-direction:column;justify-content:center;gap:28px;opacity:0;transform:translateY(40px)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:#7d8288">LOOK {{ cur.n }} / 03</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6vw,96px);line-height:.92;letter-spacing:-.02em">{{ cur.name }}</h2>
+      <div style="font-size:13px;letter-spacing:.04em;color:#aeb3b8">{{ cur.mat }}</div>
+      <div style="font-size:15px;line-height:1.65;color:#c7cbcf;max-width:40ch;text-wrap:pretty">{{ cur.desc }}</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:30px">{{ cur.price }}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ sizes }}" as="s" hint-placeholder-count="5"><a href="#" onClick="{{ s.pick }}" style="min-width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:12px;border:1px solid {{ s.border }};background:{{ s.bg }};color:{{ s.fg }}">{{ s.label }}</a></sc-for>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#" style="background:#e9eaec;color:#08090b;padding:17px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Aggiungi alla borsa</a>
+        <a href="#" style="border:1px solid rgba(233,234,236,.4);padding:17px 30px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Prenota una prova</a>
+      </div>
+    </div>
+    <a href="#" data-ov-close="1" onClick="{{ close }}" style="position:absolute;top:84px;right:clamp(20px,4vw,56px);font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:0;padding:10px 0">Chiudi ✕</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showIntro&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;×&quot;}}">
+class Component extends DCLogic {
+  state = { open: null, size: 1, wipeLabel: '' };
+  rootRef = React.createRef();
+  looks = [
+    { n: '01', src: (window.__resources||{}).look01 || 'assets/look-01.jpg', name: 'Abito Cenere', mat: 'Organza di seta · corpetto ricamato', price: '€ 4.200', desc: 'Balze di organza tagliate a vivo e strascico lungo. Guanti in raso inclusi.' },
+    { n: '02', src: (window.__resources||{}).look02 || 'assets/look-02.jpg', name: 'Abito Notturno', mat: 'Velluto di seta · spacco laterale', price: '€ 2.650', desc: 'Scollo a cuore e drappeggio annodato in vita. Guanti lunghi in velluto.' },
+    { n: '03', src: (window.__resources||{}).look03 || 'assets/look-03.jpg', name: 'Abito Piuma', mat: 'Piume di struzzo · cristalli ricamati a mano', price: '€ 12.800', desc: 'Pezzo unico. Corpetto trasparente, gonna in pizzo ricamato e strascico di piume.' }
+  ];
+  words = "Ossidiana nasce quando la lava incontra l'aria e si raffredda in un istante. Disegniamo abiti allo stesso modo: pochi gesti, materia densa, nessun rumore.".split(' ');
+  chapters = [['hero', 'Notte'], ['manifesto', 'Manifesto'], ['collezione', 'Collezione'], ['velluto', 'Materia'], ['atelier', 'Atelier']];
+  sp() { return this.props.speed ?? 1; }
+  q(s) { return this.rootRef.current && this.rootRef.current.querySelector(s); }
+  qa(s) { return this.rootRef.current ? [...this.rootRef.current.querySelectorAll(s)] : []; }
+  componentDidMount() {
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = null; this.update(); }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    this.update();
+    const oi = this.q('[data-ov-img]'); if (oi) Object.assign(oi.style, { opacity: 0, width: '0px', height: '0px', left: '0px', top: '0px' });
+    const c = this.q('[data-curtain]');
+    const reveal = () => this.qa('[data-hero-in]').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+    if (this.props.showIntro === false) { c.style.transform = 'translateY(-100%)'; reveal(); return; }
+    this.t1 = setTimeout(() => this.qa('[data-l]').forEach((el, i) => { el.style.transitionDelay = i * 70 + 'ms'; el.style.transform = 'translateY(0)'; el.style.opacity = 1; }), 150);
+    this.t2 = setTimeout(() => {
+      c.style.transition = `transform ${1.2 * this.sp()}s cubic-bezier(.77,0,.18,1)`;
+      c.style.transform = 'translateY(-100%)';
+      setTimeout(reveal, 500 * this.sp());
+    }, 2000 * this.sp());
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onScroll);
+    clearTimeout(this.t1); clearTimeout(this.t2); document.body.style.overflow = '';
+  }
+  update() {
+    const vh = window.innerHeight, cl = v => Math.min(1, Math.max(0, v));
+    const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const prog = el => { if (!el) return 0; const b = el.getBoundingClientRect(); return cl(-b.top / Math.max(1, b.height - vh)); };
+    const ph = prog(this.q('[data-sec="hero"]'));
+    const hi = this.q('[data-hero-img]'); if (hi) hi.style.transform = `scale(${1.12 - .1 * ph}) translateY(${-3 * ph}%)`;
+    const ht = this.q('[data-hero-title]'); if (ht) { ht.style.transform = `translateY(${-ph * 140}px)`; ht.style.opacity = cl(1 - ph * 1.6); }
+    const hd = this.q('[data-hero-dim]'); if (hd) hd.style.opacity = .85 + ph * .15;
+    const pm = prog(this.q('[data-sec="manifesto"]'));
+    const ws = this.qa('[data-word]'); ws.forEach((w, i) => { w.style.opacity = .12 + .88 * cl(pm * 1.25 * ws.length - i); });
+    const pc = prog(this.q('[data-sec="collezione"]'));
+    const tr = this.q('[data-track]'); if (tr) tr.style.transform = `translate3d(${-pc * Math.max(0, tr.scrollWidth - window.innerWidth)}px,0,0)`;
+    this.qa('[data-par]').forEach((im, i) => { im.style.transform = `scale(1.18) translateX(${(pc - (i + 1) / 4) * -12}%)`; });
+    const bar = this.q('[data-bar]'); if (bar) bar.style.transform = `scaleX(${pc})`;
+    const pv = prog(this.q('[data-sec="velluto"]')), e = ease(cl(pv / .6));
+    const clip = this.q('[data-clip]'); if (clip) clip.style.clipPath = `inset(${22 * (1 - e)}% ${36 * (1 - e)}% ${22 * (1 - e)}% ${36 * (1 - e)}%)`;
+    const ci = this.q('[data-clip-img]'); if (ci) ci.style.transform = `scale(${1.3 - .3 * e})`;
+    const cp = this.q('[data-clip-pre]'); if (cp) { cp.style.opacity = cl(1 - e * 1.5); cp.style.letterSpacing = `${e * .3}em`; }
+    const ct = this.q('[data-clip-text]'); if (ct) { const o = cl((pv - .55) / .2); ct.style.opacity = o; ct.style.transform = `translateY(${-40 - (1 - o) * -8}%)`; }
+    let cur = 0;
+    this.chapters.forEach(([id], i) => { const el = this.q(`[data-sec="${id}"]`); if (el && el.getBoundingClientRect().top <= vh * .5) cur = i; });
+    if (cur !== this.curCh) {
+      this.curCh = cur;
+      const n = this.q('[data-ch-n]'), l = this.q('[data-ch-l]');
+      if (n) n.textContent = '0' + (cur + 1); if (l) l.textContent = this.chapters[cur][1];
+    }
+  }
+  goTo(id, label) {
+    return e => {
+      e && e.preventDefault();
+      const c = this.q('[data-curtain]'), el = this.q(`[data-sec="${id}"]`); if (!c || !el) return;
+      const d = 0.9 * this.sp();
+      this.setState({ wipeLabel: label });
+      this.q('[data-intro]').style.opacity = 0;
+      const w = this.q('[data-wipe]'); w.style.transition = 'opacity .5s'; w.style.opacity = 0;
+      c.style.transition = 'none'; c.style.transform = 'translateY(100%)'; c.offsetHeight;
+      c.style.transition = `transform ${d}s cubic-bezier(.77,0,.18,1)`; c.style.transform = 'translateY(0)';
+      setTimeout(() => { w.style.opacity = 1; }, d * 600);
+      setTimeout(() => {
+        window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY);
+        this.update();
+        setTimeout(() => { w.style.opacity = 0; c.style.transform = 'translateY(-100%)'; }, 450 * this.sp());
+      }, d * 1000 + 150);
+    };
+  }
+  openLook(i, e) {
+    e && e.preventDefault();
+    const src = e && e.currentTarget.querySelector('img'); if (!src) return;
+    const r = src.parentElement.getBoundingClientRect(); this.fromRect = r; this.fromEl = src.parentElement;
+    const d = 1.1 * this.sp(), ez = 'cubic-bezier(.77,0,.18,1)';
+    const ov = this.q('[data-ov]'), bg = this.q('[data-ov-bg]'), im = this.q('[data-ov-img]'), pn = this.q('[data-ov-panel]'), cx = this.q('[data-ov-close]');
+    this.setState({ open: i }, () => requestAnimationFrame(() => this.runOpen(src, r, d, ez, ov, bg, im, pn, cx, i)));
+  }
+  runOpen(src, r, d, ez, ov, bg, im, pn, cx, i) {
+    document.body.style.overflow = 'hidden';
+    im.src = this.looks[i].src;
+    Object.assign(im.style, { transition: 'none', left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px', opacity: 1 });
+    src.style.opacity = 0; im.offsetHeight;
+    ov.style.pointerEvents = 'auto';
+    const narrow = window.innerWidth < 800;
+    Object.assign(im.style, { transition: `all ${d}s ${ez}`, left: '0px', top: '0px', width: narrow ? '100vw' : '50vw', height: narrow ? '45vh' : '100vh' });
+    bg.style.transition = `opacity ${d * .8}s`; bg.style.opacity = 1;
+    Object.assign(pn.style, { width: narrow ? '100vw' : '50vw', top: narrow ? '38vh' : '0', transition: `opacity .8s ${d * .7}s, transform 1s ${d * .7}s ${ez}`, opacity: 1, transform: 'none' });
+    cx.style.transition = `opacity .6s ${d}s`; cx.style.opacity = 1;
+  }
+  close(e) {
+    e && e.preventDefault();
+    const d = 1 * this.sp(), ez = 'cubic-bezier(.77,0,.18,1)';
+    const ov = this.q('[data-ov]'), bg = this.q('[data-ov-bg]'), im = this.q('[data-ov-img]'), pn = this.q('[data-ov-panel]'), cx = this.q('[data-ov-close]');
+    const r = this.fromEl ? this.fromEl.getBoundingClientRect() : this.fromRect;
+    Object.assign(pn.style, { transition: 'opacity .4s, transform .5s', opacity: 0, transform: 'translateY(40px)' });
+    cx.style.transition = 'opacity .3s'; cx.style.opacity = 0;
+    setTimeout(() => {
+      Object.assign(im.style, { transition: `all ${d}s ${ez}`, left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px' });
+      bg.style.transition = `opacity ${d}s`; bg.style.opacity = 0;
+    }, 250);
+    setTimeout(() => {
+      const src = this.fromEl && this.fromEl.querySelector('img'); if (src) src.style.opacity = 1;
+      Object.assign(im.style, { transition: 'none', opacity: 0, width: '0px', height: '0px' }); ov.style.pointerEvents = 'none'; document.body.style.overflow = '';
+      this.setState({ open: null });
+    }, 250 + d * 1000);
+  }
+  renderVals() {
+    const cur = this.looks[this.state.open ?? 0];
+    return {
+      rootRef: this.rootRef,
+      wipeLabel: this.state.wipeLabel,
+      words: this.words,
+      cur,
+      looks: this.looks.map((l, i) => ({ ...l, open: e => this.openLook(i, e) })),
+      sizes: ['36', '38', '40', '42', '44'].map((label, i) => {
+        const on = this.state.size === i;
+        return { label, border: on ? '#e9eaec' : '#34373c', bg: on ? '#e9eaec' : 'transparent', fg: on ? '#08090b' : '#e9eaec', pick: e => { e.preventDefault(); this.setState({ size: i }); } };
+      }),
+      openVelluto: e => {
+        e.preventDefault();
+        this.goTo('collezione', 'La collezione')(null);
+      },
+      close: e => this.close(e),
+      goHero: this.goTo('hero', 'Notte'),
+      goManifesto: this.goTo('manifesto', 'Manifesto'),
+      goCollezione: this.goTo('collezione', 'La collezione'),
+      goAtelier: this.goTo('atelier', 'Atelier')
+    };
+  }
+}
+</script>
+</body>
+</html>
