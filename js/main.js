@@ -232,12 +232,31 @@
     });
   }
 
+  function initNavToggle() {
+    const toggle = q('.nav-toggle');
+    const nav = q('.site-nav');
+    if (!toggle || !nav) return;
+    const close = () => {
+      nav.classList.remove('nav-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('nav-open');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    qa('.site-nav a').forEach((a) => a.addEventListener('click', close));
+  }
+
   function init() {
     buildManifestoWords();
 
     qa('[data-goto]').forEach((el) => {
       el.addEventListener('click', goTo(el.dataset.goto, el.dataset.label));
     });
+
+    initNavToggle();
 
     qa('[data-look]').forEach((card) => {
       card.addEventListener('click', (e) => openLook(Number(card.dataset.look), e));
