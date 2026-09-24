@@ -430,7 +430,7 @@ h1, h2, p { margin: 0; }
 /* ---------- Collezione ---------- */
 
 .collezione {
-  height: 420vh;
+  height: 760vh;
   position: relative;
   background: var(--bg);
 }

@@ -10,9 +10,12 @@
   const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
   const looks = [
-    { n: '01', src: 'assets/look-01.jpg', name: 'Abito Cenere', mat: 'Organza di seta · corpetto ricamato', price: '€ 4.200', desc: 'Balze di organza tagliate a vivo e strascico lungo. Guanti in raso inclusi.' },
-    { n: '02', src: 'assets/look-02.jpg', name: 'Abito Notturno', mat: 'Velluto di seta · spacco laterale', price: '€ 2.650', desc: 'Scollo a cuore e drappeggio annodato in vita. Guanti lunghi in velluto.' },
-    { n: '03', src: 'assets/look-03.jpg', name: 'Abito Piuma', mat: 'Piume di struzzo · cristalli ricamati a mano', price: '€ 12.800', desc: 'Pezzo unico. Corpetto trasparente, gonna in pizzo ricamato e strascico di piume.' }
+    { n: '01', src: 'assets/look-01.webp', name: 'Ombra', mat: 'Tessuto opaco alta qualità · spalle scolpite', price: '€ 390', desc: 'Mini dress couture nero, dalla silhouette netta e architettonica. Vita stretta, spalle scolpite, gonna corta leggermente svasata in tessuto nero opaco di alta qualità. Elegante, deciso e contemporaneo.' },
+    { n: '02', src: 'assets/look-02.webp', name: 'Nocturne', mat: 'Velluto · corsetto e pantalone palazzo', price: '€ 490', desc: 'Completo composto da corsetto nero aderente e pantalone palazzo in velluto. Il contrasto tra il bustino strutturato e il movimento morbido del pantalone crea una silhouette sofisticata e sensuale.' },
+    { n: '03', src: 'assets/look-03.webp', name: 'Eclissi', mat: 'Seta nera · drappeggio monospalla', price: '€ 590', desc: 'Abito lungo in seta nera, caratterizzato da una sola spalla e da un drappeggio diagonale che attraversa il busto. La gonna cade morbida e fluida, creando movimento senza bisogno di decorazioni.' },
+    { n: '04', src: 'assets/look-04.webp', name: 'Venere', mat: 'Bustino sagomato · schiena scoperta', price: '€ 690', desc: 'Abito lungo nero estremamente femminile. Bustino sagomato, vita definita, schiena completamente scoperta e gonna morbida con un leggero strascico. Un capo sensuale ma raffinato.' },
+    { n: '05', src: 'assets/look-05.webp', name: 'Corvo', mat: 'Piume nere · costruzione scultorea', price: '€ 890', desc: 'Il primo vero pezzo statement della collezione. Abito lungo nero aderente, estremamente elegante, con una costruzione di piume nere che nasce dalle spalle e segue il busto, aumentando gradualmente il volume.' },
+    { n: '06', src: 'assets/look-06.webp', name: 'Obsidian Wing', mat: 'Piume e tessuto strutturato · ala scenografica', price: '€ 1.290', desc: "Il capo simbolo di Ossidiana. Abito nero aderente, minimal nella parte centrale, con una gigantesca struttura laterale che si apre dal fianco e dalla schiena come un'ala. Piume nere e tessuto strutturato costruiscono una forma scenografica, quasi scultorea." }
   ];
 
   const chapters = [
@@ -65,8 +68,9 @@
     const pc = sectionProgress(q('[data-sec="collezione"]'));
     const tr = q('[data-track]');
     if (tr) tr.style.transform = `translate3d(${-pc * Math.max(0, tr.scrollWidth - window.innerWidth)}px,0,0)`;
-    qa('[data-par]').forEach((im, i) => {
-      im.style.transform = `scale(1.18) translateX(${(pc - (i + 1) / 4) * -12}%)`;
+    const pars = qa('[data-par]');
+    pars.forEach((im, i) => {
+      im.style.transform = `scale(1.18) translateX(${(pc - (i + 1) / (pars.length + 1)) * -12}%)`;
     });
     const bar = q('[data-bar]');
     if (bar) bar.style.transform = `scaleX(${pc})`;
@@ -177,7 +181,7 @@
 
   function fillOverlay(i) {
     const l = looks[i];
-    q('[data-ov-eyebrow]').textContent = `LOOK ${l.n} / 03`;
+    q('[data-ov-eyebrow]').textContent = `LOOK ${l.n} / ${String(looks.length).padStart(2, '0')}`;
     q('[data-ov-name]').textContent = l.name;
     q('[data-ov-mat]').textContent = l.mat;
     q('[data-ov-desc]').textContent = l.desc;
