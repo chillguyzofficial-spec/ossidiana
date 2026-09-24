@@ -775,6 +775,33 @@ h1, h2, p { margin: 0; }
 @media (max-width: 760px) {
   .caldera-hotspot { top: 58%; left: 52%; }
   .caldera-hotspot-label { left: auto; right: 100%; margin-left: 0; margin-right: 14px; }
+  .velluto { height: auto; }
+  .velluto-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow: visible;
+    display: block;
+  }
+  .velluto-clip {
+    position: relative;
+    inset: auto;
+    height: 62vh;
+    clip-path: none !important;
+  }
+  .velluto-pre { display: none; }
+  .velluto-text {
+    position: relative;
+    inset: auto;
+    left: auto;
+    top: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    max-width: none;
+    padding: 28px clamp(20px, 6vw, 32px) 48px;
+    gap: 16px;
+  }
+  .velluto-text h2 { font-size: clamp(32px, 9vw, 44px); }
 }
 .velluto-pre {
   position: absolute;
