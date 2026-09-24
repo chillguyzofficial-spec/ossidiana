@@ -190,16 +190,20 @@
     }
 
     // Chapter indicator
+    // On mobile the Manifesto chapter isn't rendered inline (it lives on its
+    // own page, manifesto.html), so it's dropped from the count there to
+    // keep "01/02/03..." matching what the visitor actually scrolls through.
+    const activeChapters = mobile ? chapters.filter(([id]) => id !== 'manifesto') : chapters;
     let cur = 0;
-    chapters.forEach(([id], i) => {
+    activeChapters.forEach(([id], i) => {
       const el = q(`[data-sec="${id}"]`);
-      if (el && el.getBoundingClientRect().top <= vh * .5) cur = i;
+      if (el && el.offsetParent !== null && el.getBoundingClientRect().top <= vh * .5) cur = i;
     });
     if (cur !== curCh) {
       curCh = cur;
       const n = q('[data-ch-n]'), l = q('[data-ch-l]');
       if (n) n.textContent = '0' + (cur + 1);
-      if (l) l.textContent = chapters[cur][1];
+      if (l) l.textContent = activeChapters[cur][1];
     }
     const chInd = q('.chapter-indicator');
     const footerEl = q('.site-footer');
@@ -211,7 +215,7 @@
     }
     const colProg = q('[data-collezione-progress]');
     if (colProg && chInd) {
-      colProg.style.opacity = cur === 2 ? chVisible : 0;
+      colProg.style.opacity = activeChapters[cur] && activeChapters[cur][0] === 'collezione' ? chVisible : 0;
       const chRect = chInd.getBoundingClientRect();
       colProg.style.left = (chRect.right + 24) + 'px';
     }

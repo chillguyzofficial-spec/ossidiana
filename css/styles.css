@@ -522,40 +522,9 @@ h1, h2, p { margin: 0; }
   transition: opacity .3s, transform .3s;
 }
 @media (max-width: 760px) {
-  .manifesto { height: auto; background: var(--bg-alt); }
-  .manifesto-sticky {
-    position: relative;
-    top: auto;
-    height: auto;
-    overflow: visible;
-    display: block;
-  }
-  .manifesto-img {
-    position: relative;
-    inset: auto;
-    height: 46vh;
-    object-position: 16% 45%;
-    transform: none !important;
-  }
-  .manifesto-dim { display: none; }
-  .manifesto-veil { display: none; }
-  .manifesto-numeral { display: none; }
-  .manifesto-content {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    right: auto;
-    left: auto;
-    transform: none;
-    width: auto;
-    padding: 28px 24px 40px;
-    background: var(--bg-alt);
-  }
-  .manifesto-text { font-size: clamp(28px, 7vw, 40px); }
-  .manifesto-eyebrow,
-  .manifesto-fact,
-  .manifesto-cta { opacity: 1 !important; transform: none !important; }
-  .manifesto-text .word { opacity: 1 !important; }
+  /* Su mobile il capitolo Manifesto non e' inline nella home: vive da
+     solo su manifesto.html (vedi nav-manifesto-desktop/-mobile). */
+  .manifesto { display: none; }
 }
 
 /* ---------- Collezione ---------- */
@@ -747,7 +716,7 @@ h1, h2, p { margin: 0; }
     display: flex;
     height: auto;
     width: auto;
-    padding: 32px 20px 48px;
+    padding: 32px 24px 48px;
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x proximity;
@@ -1155,6 +1124,25 @@ h1, h2, p { margin: 0; }
   .storia-content { width: auto; margin: 0 24px; padding: 90px 0 60px; }
   .storia-craft { grid-template-columns: 1fr; }
   .storia-narrative { padding: 70px 24px; }
+}
+
+/* Manifesto page (mobile-only destination, see nav-manifesto-*) */
+.manifesto-page-hero .storia-img { object-position: 16% 28%; }
+.manifesto-page-fact {
+  padding-left: 16px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: var(--muted-4);
+}
+
+/* Manifesto nav link: anchor into the home scroll on desktop, its own
+   page on mobile (see index.html/storia.html/manifesto.html headers+footers) */
+.nav-manifesto-mobile { display: none; }
+@media (max-width: 760px) {
+  .nav-manifesto-desktop { display: none; }
+  .nav-manifesto-mobile { display: block; }
 }
 
 /* ---------- Prenota ---------- */
