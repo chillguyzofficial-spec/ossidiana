@@ -502,12 +502,12 @@ h1, h2, p { margin: 0; }
     position: relative;
     top: auto;
     height: auto;
-    min-height: 86vh;
+    min-height: 68vh;
     overflow: visible;
     display: flex;
     align-items: flex-end;
   }
-  .manifesto-img { object-position: 30% 50%; }
+  .manifesto-img { object-position: 16% 50%; }
   .manifesto-dim {
     background:
       linear-gradient(0deg, rgba(7, 7, 7, .8) 0%, rgba(7, 7, 7, .4) 45%, rgba(7, 7, 7, .1) 100%);
@@ -521,7 +521,7 @@ h1, h2, p { margin: 0; }
     left: auto;
     transform: none;
     width: auto;
-    padding: 40px 24px 48px;
+    padding: 28px 24px 24px;
   }
   .manifesto-text { font-size: clamp(28px, 7vw, 40px); }
   .manifesto-eyebrow,
@@ -701,7 +701,7 @@ h1, h2, p { margin: 0; }
     display: flex;
     height: auto;
     width: auto;
-    padding: 70px 20px 48px;
+    padding: 32px 20px 48px;
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x proximity;
