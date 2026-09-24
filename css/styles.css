@@ -272,6 +272,9 @@ h1, h2, p { margin: 0; }
     transform: translateY(0);
     pointer-events: auto;
   }
+  .site-header.nav-is-open {
+    mix-blend-mode: normal;
+  }
   .site-nav a {
     display: flex;
     align-items: center;

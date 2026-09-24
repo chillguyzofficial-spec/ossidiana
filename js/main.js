@@ -635,10 +635,12 @@
     const toggle = q('.nav-toggle');
     const nav = q('.site-nav');
     if (!toggle || !nav) return;
+    const header = q('.site-header');
     const setOpen = (open) => {
       nav.classList.toggle('nav-open', open);
       toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (header) header.classList.toggle('nav-is-open', open);
       const chInd = q('.chapter-indicator');
       if (chInd) chInd.style.visibility = open ? 'hidden' : '';
       document.body.style.overflow = open ? 'hidden' : '';
