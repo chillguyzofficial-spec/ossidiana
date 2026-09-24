@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ossidiana — Collezione 01 · Autunno Inverno 2026</title>
-<meta name="description" content="Ossidiana — atelier di alta moda a Milano. Tre abiti, un solo nero: organza, velluto e piuma, cuciti a mano in pochi esemplari.">
+<title>Ossidiana — Collezione I · Autunno Inverno 2026</title>
+<meta name="description" content="Ossidiana — atelier di alta moda a Milano. Sei abiti, un solo nero: raso, velluto e piuma, cuciti a mano in pochi esemplari.">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ossidiana — Collezione 01 · Autunno Inverno 2026">
-<meta property="og:description" content="Tre abiti, un solo nero: organza, velluto e piuma, cuciti a mano in pochi esemplari nell'atelier di Milano.">
+<meta property="og:title" content="Ossidiana — Collezione I · Autunno Inverno 2026">
+<meta property="og:description" content="Sei abiti, un solo nero: raso, velluto e piuma, cuciti a mano in pochi esemplari nell'atelier di Milano.">
 <meta property="og:image" content="og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ossidiana — Collezione 01 · Autunno Inverno 2026">
-<meta name="twitter:description" content="Tre abiti, un solo nero: organza, velluto e piuma, cuciti a mano in pochi esemplari nell'atelier di Milano.">
+<meta name="twitter:title" content="Ossidiana — Collezione I · Autunno Inverno 2026">
+<meta name="twitter:description" content="Sei abiti, un solo nero: raso, velluto e piuma, cuciti a mano in pochi esemplari nell'atelier di Milano.">
 <meta name="twitter:image" content="og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -42,19 +42,20 @@
         <span class="letter-mask"><span class="letter" data-l>N</span></span>
         <span class="letter-mask"><span class="letter" data-l>A</span></span>
       </div>
-      <div class="curtain-subtitle" data-l>COLLEZIONE 01 · NOTTE</div>
     </div>
     <div class="curtain-wipe" data-wipe></div>
   </div>
 
   <!-- Header -->
+  <div class="header-scrim" aria-hidden="true"></div>
   <header class="site-header">
     <a href="#hero" class="logo" data-goto="hero" data-label="Notte">OSSIDIANA</a>
     <nav class="site-nav">
       <a href="#manifesto" data-goto="manifesto" data-label="Manifesto">Manifesto</a>
       <a href="#collezione" data-goto="collezione" data-label="La collezione">Collezione</a>
       <a href="#atelier" data-goto="atelier" data-label="Atelier">Atelier</a>
-      <a href="#" class="nav-bag">Borsa (0)</a>
+      <a href="storia.html" data-goto-page="storia.html" data-label="Storia">Storia</a>
+      <a href="#" data-prenota-open>Prenota</a>
     </nav>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -69,16 +70,14 @@
   <!-- Hero -->
   <section class="hero" id="hero" data-sec="hero">
     <div class="hero-sticky">
-      <picture>
-        <source srcset="assets/hero-atelier.webp" type="image/webp">
-        <img class="hero-img" data-hero-img src="assets/hero-atelier.jpg" alt="Silhouette in controluce, collezione Ossidiana" fetchpriority="high">
-      </picture>
+      <img class="hero-img" data-hero-img src="assets/hero-atelier.webp" alt="Donna in abito nero, raggi di luce in un interno scuro, collezione Ossidiana" fetchpriority="high">
       <div class="hero-dim" data-hero-dim></div>
+      <div class="hero-veil" data-hero-veil aria-hidden="true"></div>
       <div class="hero-title" data-hero-title>
         <div class="hero-title-main" data-hero-in>
-          <div class="eyebrow hero-eyebrow"><span class="eyebrow-rule"></span>Collezione 01 · Autunno Inverno 2026</div>
+          <div class="eyebrow hero-eyebrow"><span class="eyebrow-rule"></span>Collezione I · Autunno Inverno 2026</div>
           <h1>Ciò che resta dopo la <i>luce</i>.</h1>
-          <div class="hero-subline">Edizione limitata. Nove esemplari per abito, cuciti a mano a Milano.</div>
+          <div class="hero-subline">Alta sartoria a Milano. Edizione limitata, ogni abito cucito a mano.</div>
           <a href="#collezione" class="btn btn-light" data-goto="collezione" data-label="La collezione">Entra nella collezione<span class="btn-arrow">→</span></a>
         </div>
         <div class="hero-scroll" data-hero-in>Scorri<span class="scroll-line"></span></div>
@@ -89,13 +88,16 @@
   <!-- Manifesto -->
   <section class="manifesto" id="manifesto" data-sec="manifesto">
     <div class="manifesto-sticky">
-      <picture>
-        <source srcset="assets/manifesto-bg.webp" type="image/webp">
-        <img class="manifesto-img" src="assets/manifesto-bg.jpg" alt="" loading="lazy">
-      </picture>
+      <img class="manifesto-img" data-manifesto-img src="assets/manifesto-bg.webp" alt="Dettaglio: spalline in piuma nera su abiti Ossidiana, roccia vulcanica" loading="lazy">
       <div class="manifesto-dim"></div>
-      <div class="eyebrow eyebrow-mono">CAPITOLO I — MANIFESTO</div>
-      <p class="manifesto-text" data-words></p>
+      <div class="manifesto-veil" data-manifesto-veil aria-hidden="true"></div>
+      <div class="manifesto-numeral" data-manifesto-numeral aria-hidden="true">01</div>
+      <div class="manifesto-content">
+        <div class="eyebrow eyebrow-mono manifesto-eyebrow" data-manifesto-eyebrow><span class="eyebrow-rule"></span>CAPITOLO I — MANIFESTO</div>
+        <p class="manifesto-text" data-words></p>
+        <div class="manifesto-fact" data-manifesto-fact>Fondata a Milano nel 1928 · meno di venti abiti l'anno.</div>
+        <a href="storia.html" class="btn btn-outline manifesto-cta" data-manifesto-cta data-goto-page="storia.html" data-label="Storia">La nostra storia</a>
+      </div>
     </div>
   </section>
 
@@ -110,7 +112,7 @@
         </div>
 
         <a href="#" class="look-card" data-look="0">
-          <div class="look-card-media"><img data-par src="assets/look-01.webp" alt="Ombra"></div>
+          <div class="look-card-media"><span class="look-card-tag">Spalla scolpita</span><img data-par src="assets/look-01.webp" alt="Ombra"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">01</span><span class="serif">Ombra</span></div>
             <span class="look-card-price">€ 390</span>
@@ -119,7 +121,7 @@
         </a>
 
         <a href="#" class="look-card" data-look="1">
-          <div class="look-card-media"><img data-par src="assets/look-02.webp" alt="Nocturne"></div>
+          <div class="look-card-media"><span class="look-card-tag">Corsetto in velluto</span><img data-par src="assets/look-02.webp" alt="Nocturne"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">02</span><span class="serif">Nocturne</span></div>
             <span class="look-card-price">€ 490</span>
@@ -128,7 +130,7 @@
         </a>
 
         <a href="#" class="look-card" data-look="2">
-          <div class="look-card-media"><img data-par src="assets/look-03.webp" alt="Eclissi"></div>
+          <div class="look-card-media"><span class="look-card-tag">Drappeggio monospalla</span><img data-par src="assets/look-03.webp" alt="Eclissi"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">03</span><span class="serif">Eclissi</span></div>
             <span class="look-card-price">€ 590</span>
@@ -137,7 +139,7 @@
         </a>
 
         <a href="#" class="look-card" data-look="3">
-          <div class="look-card-media"><img data-par src="assets/look-04.webp" alt="Venere"></div>
+          <div class="look-card-media"><span class="look-card-tag">Schiena scoperta</span><img data-par src="assets/look-04.webp" alt="Venere"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">04</span><span class="serif">Venere</span></div>
             <span class="look-card-price">€ 690</span>
@@ -146,7 +148,7 @@
         </a>
 
         <a href="#" class="look-card" data-look="4">
-          <div class="look-card-media"><img data-par src="assets/look-05.webp" alt="Corvo"></div>
+          <div class="look-card-media"><span class="look-card-tag">Piume scolpite a mano</span><img data-par src="assets/look-05.webp" alt="Corvo"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">05</span><span class="serif">Corvo</span></div>
             <span class="look-card-price">€ 890</span>
@@ -155,7 +157,7 @@
         </a>
 
         <a href="#" class="look-card" data-look="5">
-          <div class="look-card-media"><img data-par src="assets/look-06.webp" alt="Obsidian Wing"></div>
+          <div class="look-card-media"><span class="look-card-tag">Il capo simbolo</span><img data-par src="assets/look-06.webp" alt="Obsidian Wing"></div>
           <div class="look-card-row">
             <div class="look-card-name"><span class="mono">06</span><span class="serif">Obsidian Wing</span></div>
             <span class="look-card-price">€ 1.290</span>
@@ -165,7 +167,7 @@
 
         <div class="collezione-spacer"></div>
       </div>
-      <div class="collezione-progress"><div class="collezione-progress-bar" data-bar></div></div>
+      <div class="collezione-progress" data-collezione-progress><div class="collezione-progress-bar" data-bar></div></div>
     </div>
   </section>
 
@@ -173,77 +175,165 @@
   <section class="velluto" id="velluto" data-sec="velluto">
     <div class="velluto-sticky">
       <div class="velluto-clip" data-clip>
-        <picture>
-          <source srcset="assets/velluto-bg.webp" type="image/webp">
-          <img class="velluto-clip-img" data-clip-img src="assets/velluto-bg.jpg" alt="Dettaglio in velluto nero su manichino" loading="lazy">
-        </picture>
+        <img class="velluto-clip-img" data-clip-img src="assets/materia-bg.webp" alt="Caldera, corsetto in ossidiana sfaccettata con gonna in seta e lava solidificata" loading="lazy">
         <div class="velluto-clip-shade"></div>
+        <button type="button" class="caldera-hotspot" data-caldera-look aria-label="Scopri il pezzo unico Caldera">
+          <span class="caldera-hotspot-label">Clicca per scoprire</span>
+        </button>
       </div>
-      <div class="velluto-pre" data-clip-pre><span>Vel</span><i>luto</i></div>
+      <div class="velluto-pre" data-clip-pre><span>Cal</span><i>dera</i></div>
       <div class="velluto-text" data-clip-text>
         <div class="eyebrow eyebrow-light">CAPITOLO III — MATERIA</div>
-        <h2>Il velluto trattiene il <i>buio</i>.</h2>
-        <div class="body-text body-text-light">Velluto di seta tinto tre volte, finché assorbe la luce invece di rifletterla. Drappeggiato a mano sul corpo.</div>
-        <a href="#collezione" class="btn btn-outline" data-goto="collezione" data-label="La collezione">Nocturne · € 490</a>
+        <div class="materia-tag">Pezzo unico · esemplare 1/1</div>
+        <h2>La pietra si taglia come un <i>diamante</i>.</h2>
+        <div class="body-text body-text-light">Corsetto scolpito a mano in ossidiana sfaccettata, vetro vulcanico nero. La gonna in seta si scioglie alla base in lava solidificata — solo pietra e seta, nessun tessuto aggiuntivo. Non verrà replicato.</div>
+        <a href="#atelier" class="btn btn-accent" data-goto="atelier" data-label="Atelier">Caldera · € 3.200 — Su appuntamento</a>
       </div>
     </div>
   </section>
 
   <!-- Atelier -->
   <section class="atelier" id="atelier" data-sec="atelier">
-    <div class="atelier-text">
-      <div class="eyebrow eyebrow-mono">CAPITOLO IV — ATELIER</div>
+    <div class="atelier-media">
+      <img class="atelier-img" src="assets/atelier-bg.webp" alt="Interno dell'atelier Ossidiana a Milano" loading="lazy">
+      <div class="atelier-dim"></div>
+    </div>
+    <div class="atelier-content">
+      <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CAPITOLO IV — ATELIER</div>
       <h2>Ogni abito si prova <i>in privato</i>.</h2>
-      <div class="body-text">Riceviamo su appuntamento nel nostro atelier di Milano. Una stanza, una cliente, il tempo necessario.</div>
+      <div class="body-text body-text-light">Riceviamo su appuntamento nel nostro atelier di Milano. Una stanza, una cliente, il tempo necessario.</div>
       <div class="atelier-cta">
-        <a href="#" class="btn btn-accent">Prenota una prova</a>
-        <a href="#" class="btn btn-outline">Via Borgonuovo, Milano</a>
+        <a href="#" class="btn btn-accent" data-prenota-open>Prenota una prova</a>
+      </div>
+      <div class="atelier-info">
+        <div class="atelier-info-item"><span class="atelier-info-label">Indirizzo</span>Via Borgonuovo, Milano</div>
+        <div class="atelier-info-item"><span class="atelier-info-label">Orari</span>Lunedì – Sabato, 10:00 – 19:00</div>
+        <div class="atelier-info-item"><span class="atelier-info-label">Su appuntamento</span>+39 02 8734 5521</div>
       </div>
     </div>
-    <div class="atelier-image"><img src="assets/look-01.webp" alt="Ombra" loading="lazy"></div>
   </section>
+
+  <!-- Prenota -->
+  <div class="prenota-modal" data-prenota-modal>
+    <div class="prenota-modal-bg" data-prenota-modal-bg></div>
+    <div class="prenota-modal-panel" data-prenota-modal-panel>
+      <a href="#" class="prenota-modal-close" data-prenota-modal-close>Chiudi ✕</a>
+      <div class="prenota-intro">
+        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CAPITOLO V — PRENOTAZIONE</div>
+        <h2>Richiedi la tua <i>prova</i>.</h2>
+        <div class="body-text">Lasciaci i tuoi dati: confermiamo data e ora in atelier entro 24 ore.</div>
+      </div>
+      <form class="prenota-form" data-prenota-form>
+        <div class="prenota-row">
+          <label class="prenota-field">Nome e cognome<input type="text" name="nome" required></label>
+          <label class="prenota-field">Email<input type="email" name="email" required></label>
+        </div>
+        <div class="prenota-field">
+          <span class="prenota-label">Capo di interesse</span>
+          <div class="prenota-select" data-prenota-select>
+            <button type="button" class="prenota-select-btn" data-prenota-select-btn>
+              <span data-prenota-select-label>Nessuna preferenza</span>
+              <span class="prenota-select-arrow">▾</span>
+            </button>
+            <ul class="prenota-select-list" data-prenota-select-list>
+              <li data-value="">Nessuna preferenza</li>
+              <li data-value="01 — Ombra">01 — Ombra</li>
+              <li data-value="02 — Nocturne">02 — Nocturne</li>
+              <li data-value="03 — Eclissi">03 — Eclissi</li>
+              <li data-value="04 — Venere">04 — Venere</li>
+              <li data-value="05 — Corvo">05 — Corvo</li>
+              <li data-value="06 — Obsidian Wing">06 — Obsidian Wing</li>
+              <li data-value="Caldera — pezzo unico">Caldera — pezzo unico</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prenota-field">
+          <span class="prenota-label">Giorno preferito</span>
+          <div class="prenota-calendar" data-prenota-calendar>
+            <div class="prenota-cal-head">
+              <button type="button" class="prenota-cal-nav" data-cal-prev aria-label="Mese precedente">‹</button>
+              <span data-cal-month></span>
+              <button type="button" class="prenota-cal-nav" data-cal-next aria-label="Mese successivo">›</button>
+            </div>
+            <div class="prenota-cal-dow">
+              <span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span>
+            </div>
+            <div class="prenota-cal-grid" data-cal-grid></div>
+          </div>
+        </div>
+        <label class="prenota-field"><span>Messaggio <span class="prenota-optional">(opzionale)</span></span><textarea name="messaggio" rows="3"></textarea></label>
+        <button type="submit" class="btn btn-accent">Invia richiesta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Info modal (guida taglie, termini, privacy, cookie) -->
+  <div class="info-modal" data-info-modal>
+    <div class="prenota-modal-bg" data-info-modal-bg></div>
+    <div class="prenota-modal-panel info-modal-panel" data-info-modal-panel>
+      <a href="#" class="prenota-modal-close" data-info-modal-close>Chiudi ✕</a>
+      <div class="eyebrow eyebrow-mono" data-info-eyebrow><span class="eyebrow-rule"></span></div>
+      <h2 data-info-title></h2>
+      <div class="info-body" data-info-body></div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
-      <div class="footer-newsletter">
-        <div class="footer-newsletter-title">Lettere dall'atelier</div>
-        <form class="newsletter-form" data-newsletter-form>
-          <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
-          <button type="submit">Iscriviti</button>
-        </form>
+      <div class="footer-brand">
+        <div class="footer-logo">OSSIDIANA</div>
+        <div class="footer-newsletter">
+          <div class="footer-newsletter-title">Lettere dall'atelier</div>
+          <form class="newsletter-form" data-newsletter-form>
+            <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
+            <button type="submit">Iscriviti</button>
+          </form>
+        </div>
       </div>
-      <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-col-title">Assistenza</div>
+        <a href="#" data-info-open="taglie">Guida alle taglie</a>
+        <a href="#" data-prenota-open>Contatti</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Il brand</div>
+        <a href="#manifesto" data-goto="manifesto" data-label="Manifesto">Manifesto</a>
+        <a href="storia.html" data-goto-page="storia.html" data-label="Storia">Storia</a>
+        <a href="#atelier" data-goto="atelier" data-label="Atelier">Atelier</a>
         <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#">Spedizioni</a>
-        <a href="#">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legale</div>
+        <a href="#" data-info-open="termini">Termini e condizioni</a>
+        <a href="#" data-info-open="privacy">Privacy policy</a>
+        <a href="#" data-info-open="cookie">Cookie policy</a>
       </div>
     </div>
-    <div class="footer-wordmark">OSSIDIANA</div>
-    <div class="footer-bottom"><span>© 2026 OSSIDIANA</span><span>MILANO</span></div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span>© 2026 Ossidiana S.r.l.</span>
+      <span>Via Borgonuovo · 20121 Milano (MI) · P.IVA IT 12345678901 · REA MI-2284591</span>
+    </div>
   </footer>
 
   <!-- Look overlay -->
   <div class="overlay" data-ov>
     <div class="overlay-bg" data-ov-bg></div>
     <img class="overlay-img" data-ov-img src="assets/look-01.webp" alt="">
+    <div class="overlay-views" data-ov-views></div>
     <div class="overlay-panel" data-ov-panel>
       <div class="eyebrow eyebrow-mono" data-ov-eyebrow>LOOK 01 / 06</div>
       <h2 data-ov-name></h2>
       <div class="overlay-mat" data-ov-mat></div>
       <div class="body-text" data-ov-desc></div>
+      <div class="overlay-note"><span class="overlay-note-label">Nota dell'atelier</span><span data-ov-note></span></div>
       <div class="overlay-price" data-ov-price></div>
-      <div class="overlay-sizes" data-ov-sizes>
-        <a href="#" data-size="0">36</a>
-        <a href="#" data-size="1">38</a>
-        <a href="#" data-size="2">40</a>
-        <a href="#" data-size="3">42</a>
-        <a href="#" data-size="4">44</a>
-      </div>
+      <div class="overlay-bespoke">Su misura — le misure si prendono in atelier, durante la prova.</div>
       <div class="overlay-actions">
-        <a href="#" class="btn btn-light">Aggiungi alla borsa</a>
-        <a href="#" class="btn btn-outline">Prenota una prova</a>
+        <a href="#" class="btn btn-light" data-ov-book>Richiedi appuntamento</a>
       </div>
+      <div class="overlay-disclaimer">Eventuali modifiche al capo (lunghezza, vestibilità, dettagli) concordate in prova comportano un costo aggiuntivo, comunicato prima del pagamento in salone.</div>
     </div>
     <a href="#" class="overlay-close" data-ov-close>Chiudi ✕</a>
   </div>
