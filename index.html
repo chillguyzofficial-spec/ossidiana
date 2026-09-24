@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
 
@@ -109,6 +109,7 @@
           <div class="eyebrow eyebrow-mono">CAPITOLO II — LA COLLEZIONE</div>
           <h2>Sei abiti.<br><i>Un solo nero.</i></h2>
           <div class="body-text">Raso, velluto e piuma. Ogni abito è cucito a mano e prodotto in pochi esemplari.</div>
+          <div class="collezione-scroll-hint" aria-hidden="true">Scorri<span class="collezione-scroll-arrow">→</span></div>
         </div>
 
         <a href="#" class="look-card" data-look="0">
@@ -175,7 +176,10 @@
   <section class="velluto" id="velluto" data-sec="velluto">
     <div class="velluto-sticky">
       <div class="velluto-clip" data-clip>
-        <img class="velluto-clip-img" data-clip-img src="assets/materia-bg.webp" alt="Caldera, corsetto in ossidiana sfaccettata con gonna in seta e lava solidificata" loading="lazy">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/materia-bg-c.webp">
+          <img class="velluto-clip-img" data-clip-img src="assets/materia-bg.webp" alt="Caldera, corsetto in ossidiana sfaccettata con gonna in seta e lava solidificata" loading="lazy">
+        </picture>
         <div class="velluto-clip-shade"></div>
         <button type="button" class="caldera-hotspot" data-caldera-look aria-label="Scopri il pezzo unico Caldera">
           <span class="caldera-hotspot-label">Clicca per scoprire</span>
