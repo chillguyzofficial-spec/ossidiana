@@ -316,13 +316,23 @@ h1, h2, p { margin: 0; }
   will-change: transform;
 }
 @media (max-width: 760px) {
+  .hero { height: auto; }
+  .hero-sticky {
+    position: relative;
+    top: auto;
+    height: 88vh;
+    min-height: 520px;
+  }
   .hero-img {
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 78% 26%;
+    transform: none !important;
     transform-origin: center;
   }
+  .hero-title { bottom: clamp(28px, 6vh, 60px); }
 }
 .hero-dim {
   position: absolute;
@@ -487,6 +497,16 @@ h1, h2, p { margin: 0; }
   transition: opacity .3s, transform .3s;
 }
 @media (max-width: 760px) {
+  .manifesto { height: auto; }
+  .manifesto-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 86vh;
+    overflow: visible;
+    display: flex;
+    align-items: flex-end;
+  }
   .manifesto-img { object-position: 30% 50%; }
   .manifesto-dim {
     background:
@@ -494,14 +514,20 @@ h1, h2, p { margin: 0; }
   }
   .manifesto-numeral { display: none; }
   .manifesto-content {
+    position: relative;
     top: auto;
-    bottom: 8%;
-    right: 24px;
-    left: 24px;
+    bottom: auto;
+    right: auto;
+    left: auto;
     transform: none;
     width: auto;
+    padding: 40px 24px 48px;
   }
   .manifesto-text { font-size: clamp(28px, 7vw, 40px); }
+  .manifesto-eyebrow,
+  .manifesto-fact,
+  .manifesto-cta { opacity: 1 !important; transform: none !important; }
+  .manifesto-text .word { opacity: 1 !important; }
 }
 
 /* ---------- Collezione ---------- */
@@ -664,6 +690,32 @@ h1, h2, p { margin: 0; }
 }
 @media (max-width: 760px) {
   .collezione-progress { display: none; }
+  .collezione { height: auto; background: var(--bg-curtain); }
+  .collezione-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow: visible;
+  }
+  .collezione-track {
+    display: flex;
+    height: auto;
+    width: auto;
+    padding: 70px 20px 48px;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-dim) transparent;
+  }
+  .collezione-track::-webkit-scrollbar { height: 6px; }
+  .collezione-track::-webkit-scrollbar-track { background: transparent; }
+  .collezione-track::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+  .collezione-intro { width: 82vw; scroll-snap-align: start; }
+  .look-card { width: 78vw; scroll-snap-align: start; }
+  .look-card-media { height: 58vh; transform: none !important; }
+  .look-card-media img { transform: scale(1.02) !important; }
+  .collezione-spacer { width: 4vw; }
 }
 
 /* ---------- Velluto ---------- */
@@ -772,37 +824,6 @@ h1, h2, p { margin: 0; }
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
-@media (max-width: 760px) {
-  .caldera-hotspot { top: 58%; left: 52%; }
-  .caldera-hotspot-label { left: auto; right: 100%; margin-left: 0; margin-right: 14px; }
-  .velluto { height: auto; }
-  .velluto-sticky {
-    position: relative;
-    top: auto;
-    height: auto;
-    overflow: visible;
-    display: block;
-  }
-  .velluto-clip {
-    position: relative;
-    inset: auto;
-    height: 62vh;
-    clip-path: none !important;
-  }
-  .velluto-pre { display: none; }
-  .velluto-text {
-    position: relative;
-    inset: auto;
-    left: auto;
-    top: auto;
-    transform: none !important;
-    opacity: 1 !important;
-    max-width: none;
-    padding: 28px clamp(20px, 6vw, 32px) 48px;
-    gap: 16px;
-  }
-  .velluto-text h2 { font-size: clamp(32px, 9vw, 44px); }
-}
 .velluto-pre {
   position: absolute;
   inset: 0;
@@ -851,6 +872,37 @@ h1, h2, p { margin: 0; }
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .caldera-hotspot { top: 58%; left: 52%; }
+  .caldera-hotspot-label { left: auto; right: 100%; margin-left: 0; margin-right: 14px; }
+  .velluto { height: auto; }
+  .velluto-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow: visible;
+    display: block;
+  }
+  .velluto-clip {
+    position: relative;
+    inset: auto;
+    height: 62vh;
+    clip-path: none !important;
+  }
+  .velluto-pre { display: none; }
+  .velluto-text {
+    position: relative;
+    inset: auto;
+    left: auto;
+    top: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    max-width: none;
+    padding: 28px clamp(20px, 6vw, 32px) 48px;
+    gap: 16px;
+  }
+  .velluto-text h2 { font-size: clamp(32px, 9vw, 44px); }
 }
 
 /* ---------- Atelier ---------- */

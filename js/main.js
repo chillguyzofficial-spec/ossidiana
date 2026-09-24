@@ -109,74 +109,84 @@
     return clamp(-b.top / Math.max(1, b.height - window.innerHeight));
   }
 
+  const isMobile = () => window.matchMedia('(max-width: 760px)').matches;
+
   function update() {
     const vh = window.innerHeight;
+    const mobile = isMobile();
 
-    // Hero
-    const ph = sectionProgress(q('[data-sec="hero"]'));
-    const hi = q('[data-hero-img]');
-    if (hi) hi.style.transform = `scale(${1.12 - .1 * ph}) translateY(${-3 * ph}%)`;
-    const ht = q('[data-hero-title]');
-    if (ht) { ht.style.transform = `translateY(${-ph * 140}px)`; ht.style.opacity = clamp(1 - ph * 1.6); }
-    const hd = q('[data-hero-dim]');
-    if (hd) hd.style.opacity = .85 + ph * .15;
-    const hv = q('[data-hero-veil]');
-    if (hv) hv.style.opacity = clamp((ph - .9) / .1) * .5;
+    // Hero, Manifesto, Collezione and Velluto use a pinned scroll-scrubbed
+    // animation on desktop. On mobile that rig fights with the browser's
+    // dynamic toolbar (address bar) and produces overlapping/flickering
+    // layouts, so these sections run as plain static content instead —
+    // see the matching @media (max-width:760px) blocks in styles.css.
+    if (!mobile) {
+      // Hero
+      const ph = sectionProgress(q('[data-sec="hero"]'));
+      const hi = q('[data-hero-img]');
+      if (hi) hi.style.transform = `scale(${1.12 - .1 * ph}) translateY(${-3 * ph}%)`;
+      const ht = q('[data-hero-title]');
+      if (ht) { ht.style.transform = `translateY(${-ph * 140}px)`; ht.style.opacity = clamp(1 - ph * 1.6); }
+      const hd = q('[data-hero-dim]');
+      if (hd) hd.style.opacity = .85 + ph * .15;
+      const hv = q('[data-hero-veil]');
+      if (hv) hv.style.opacity = clamp((ph - .9) / .1) * .5;
 
-    // Manifesto
-    const pm = sectionProgress(q('[data-sec="manifesto"]'));
-    const ws = qa('.word');
-    ws.forEach((w, i) => { w.style.opacity = .12 + .88 * clamp(pm * 1.25 * ws.length - i); });
-    const mi = q('[data-manifesto-img]');
-    if (mi) mi.style.transform = `scale(${1.1 - .06 * pm})`;
-    const mv = q('[data-manifesto-veil]');
-    if (mv) mv.style.opacity = clamp(1 - pm / .05) * .5;
-    const mn = q('[data-manifesto-numeral]');
-    if (mn) mn.style.opacity = clamp((pm - .12) / .28);
-    const me = q('[data-manifesto-eyebrow]');
-    if (me) {
-      const o = clamp((pm - .05) / .25);
-      me.style.opacity = o;
-      me.style.transform = `translateX(${(1 - o) * 24}px)`;
-    }
-    const mf = q('[data-manifesto-fact]');
-    if (mf) {
-      const o = clamp((pm - .55) / .25);
-      mf.style.opacity = o;
-      mf.style.transform = `translateX(${(1 - o) * 24}px)`;
-    }
-    const mc = q('[data-manifesto-cta]');
-    if (mc) {
-      const o = clamp((pm - .65) / .25);
-      mc.style.opacity = o;
-      mc.style.transform = `translateX(${(1 - o) * 24}px)`;
-    }
+      // Manifesto
+      const pm = sectionProgress(q('[data-sec="manifesto"]'));
+      const ws = qa('.word');
+      ws.forEach((w, i) => { w.style.opacity = .12 + .88 * clamp(pm * 1.25 * ws.length - i); });
+      const mi = q('[data-manifesto-img]');
+      if (mi) mi.style.transform = `scale(${1.1 - .06 * pm})`;
+      const mv = q('[data-manifesto-veil]');
+      if (mv) mv.style.opacity = clamp(1 - pm / .05) * .5;
+      const mn = q('[data-manifesto-numeral]');
+      if (mn) mn.style.opacity = clamp((pm - .12) / .28);
+      const me = q('[data-manifesto-eyebrow]');
+      if (me) {
+        const o = clamp((pm - .05) / .25);
+        me.style.opacity = o;
+        me.style.transform = `translateX(${(1 - o) * 24}px)`;
+      }
+      const mf = q('[data-manifesto-fact]');
+      if (mf) {
+        const o = clamp((pm - .55) / .25);
+        mf.style.opacity = o;
+        mf.style.transform = `translateX(${(1 - o) * 24}px)`;
+      }
+      const mc = q('[data-manifesto-cta]');
+      if (mc) {
+        const o = clamp((pm - .65) / .25);
+        mc.style.opacity = o;
+        mc.style.transform = `translateX(${(1 - o) * 24}px)`;
+      }
 
-    // Collezione
-    const pc = sectionProgress(q('[data-sec="collezione"]'));
-    const tr = q('[data-track]');
-    if (tr) tr.style.transform = `translate3d(${-pc * Math.max(0, tr.scrollWidth - window.innerWidth)}px,0,0)`;
-    const pars = qa('[data-par]');
-    pars.forEach((im, i) => {
-      im.style.transform = `scale(1.18) translateX(${(pc - (i + 1) / (pars.length + 1)) * -12}%)`;
-    });
-    const bar = q('[data-bar]');
-    if (bar) bar.style.transform = `scaleX(${pc})`;
+      // Collezione
+      const pc = sectionProgress(q('[data-sec="collezione"]'));
+      const tr = q('[data-track]');
+      if (tr) tr.style.transform = `translate3d(${-pc * Math.max(0, tr.scrollWidth - window.innerWidth)}px,0,0)`;
+      const pars = qa('[data-par]');
+      pars.forEach((im, i) => {
+        im.style.transform = `scale(1.18) translateX(${(pc - (i + 1) / (pars.length + 1)) * -12}%)`;
+      });
+      const bar = q('[data-bar]');
+      if (bar) bar.style.transform = `scaleX(${pc})`;
 
-    // Velluto
-    const pv = sectionProgress(q('[data-sec="velluto"]'));
-    const e = ease(clamp(pv / .6));
-    const clip = q('[data-clip]');
-    if (clip) clip.style.clipPath = `inset(${22 * (1 - e)}% ${36 * (1 - e)}% ${22 * (1 - e)}% ${36 * (1 - e)}%)`;
-    const ci = q('[data-clip-img]');
-    if (ci) ci.style.transform = `scale(${1.3 - .3 * e})`;
-    const cp = q('[data-clip-pre]');
-    if (cp) { cp.style.opacity = clamp(1 - e * 1.5); cp.style.letterSpacing = `${e * .3}em`; }
-    const ct = q('[data-clip-text]');
-    if (ct) {
-      const o = clamp((pv - .55) / .2);
-      ct.style.opacity = o;
-      ct.style.transform = `translateY(${-40 - (1 - o) * -8}%)`;
+      // Velluto
+      const pv = sectionProgress(q('[data-sec="velluto"]'));
+      const e = ease(clamp(pv / .6));
+      const clip = q('[data-clip]');
+      if (clip) clip.style.clipPath = `inset(${22 * (1 - e)}% ${36 * (1 - e)}% ${22 * (1 - e)}% ${36 * (1 - e)}%)`;
+      const ci = q('[data-clip-img]');
+      if (ci) ci.style.transform = `scale(${1.3 - .3 * e})`;
+      const cp = q('[data-clip-pre]');
+      if (cp) { cp.style.opacity = clamp(1 - e * 1.5); cp.style.letterSpacing = `${e * .3}em`; }
+      const ct = q('[data-clip-text]');
+      if (ct) {
+        const o = clamp((pv - .55) / .2);
+        ct.style.opacity = o;
+        ct.style.transform = `translateY(${-40 - (1 - o) * -8}%)`;
+      }
     }
 
     // Chapter indicator
