@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=11">
+<link rel="stylesheet" href="css/styles.css?v=13">
 </head>
 <body>
 
@@ -63,11 +63,6 @@
     </button>
   </header>
 
-  <!-- Chapter indicator -->
-  <div class="chapter-indicator">
-    <span data-ch-n>01</span><span class="chapter-rule"></span><span data-ch-l>Notte</span>
-  </div>
-
   <!-- Hero -->
   <section class="hero" id="hero" data-sec="hero">
     <div class="hero-sticky">
@@ -88,7 +83,7 @@
 
   <!-- Manifesto teaser (solo mobile: il capitolo completo vive su manifesto.html) -->
   <section class="manifesto-teaser" aria-label="Manifesto">
-    <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CAPITOLO I — MANIFESTO</div>
+    <div class="chapter-mark"><span class="chapter-num" aria-hidden="true">01</span><span class="chapter-name">Manifesto</span></div>
     <p class="manifesto-teaser-text">Pochi gesti, materia densa, <i>nessun rumore</i>.</p>
     <a href="manifesto.html" class="btn btn-outline" data-goto-page="manifesto.html" data-label="Manifesto">Leggi il manifesto<span class="btn-arrow">→</span></a>
   </section>
@@ -99,9 +94,8 @@
       <img class="manifesto-img" data-manifesto-img src="assets/manifesto-bg.webp" alt="Dettaglio: spalline in piuma nera su abiti Ossidiana, roccia vulcanica" loading="lazy">
       <div class="manifesto-dim"></div>
       <div class="manifesto-veil" data-manifesto-veil aria-hidden="true"></div>
-      <div class="manifesto-numeral" data-manifesto-numeral aria-hidden="true">01</div>
       <div class="manifesto-content">
-        <div class="eyebrow eyebrow-mono manifesto-eyebrow" data-manifesto-eyebrow><span class="eyebrow-rule"></span>CAPITOLO I — MANIFESTO</div>
+        <div class="chapter-mark manifesto-eyebrow" data-manifesto-eyebrow><span class="chapter-num" aria-hidden="true">01</span><span class="chapter-name">Manifesto</span></div>
         <p class="manifesto-text" data-words></p>
         <div class="manifesto-fact" data-manifesto-fact>Fondata a Milano nel 1928 · meno di venti abiti l'anno.</div>
         <a href="storia.html" class="btn btn-outline manifesto-cta" data-manifesto-cta data-goto-page="storia.html" data-label="Storia">La nostra storia</a>
@@ -114,10 +108,10 @@
     <div class="collezione-sticky">
       <div class="collezione-track" data-track>
         <div class="collezione-intro">
-          <div class="eyebrow eyebrow-mono">CAPITOLO II — LA COLLEZIONE</div>
+          <div class="chapter-mark"><span class="chapter-num" aria-hidden="true">02</span><span class="chapter-name">La collezione</span></div>
           <h2>Sei abiti.<br><i>Un solo nero.</i></h2>
           <div class="body-text">Raso, velluto e piuma. Ogni abito è cucito a mano e prodotto in pochi esemplari.</div>
-          <div class="collezione-scroll-hint" aria-hidden="true">Scorri<span class="collezione-scroll-arrow">→</span></div>
+          <button type="button" class="collezione-scroll-hint" data-scroll-hint>Scorri i sei abiti<span class="collezione-scroll-arrow" aria-hidden="true">→</span></button>
         </div>
 
         <a href="#" class="look-card" data-look="0">
@@ -176,6 +170,7 @@
 
         <div class="collezione-spacer"></div>
       </div>
+      <div class="collezione-mprogress" aria-hidden="true"><span data-mbar></span></div>
       <div class="collezione-progress" data-collezione-progress><div class="collezione-progress-bar" data-bar></div></div>
     </div>
   </section>
@@ -195,7 +190,7 @@
       </div>
       <div class="velluto-pre" data-clip-pre><span>Cal</span><i>dera</i></div>
       <div class="velluto-text" data-clip-text>
-        <div class="eyebrow eyebrow-light">CAPITOLO III — MATERIA</div>
+        <div class="chapter-mark"><span class="chapter-num" aria-hidden="true">03</span><span class="chapter-name">Materia</span></div>
         <div class="materia-tag">Pezzo unico · esemplare 1/1</div>
         <h2>La pietra si taglia come un <i>diamante</i>.</h2>
         <div class="body-text body-text-light">Corsetto scolpito a mano in ossidiana sfaccettata, vetro vulcanico nero. La gonna in seta si scioglie alla base in lava solidificata — solo pietra e seta, nessun tessuto aggiuntivo. Non verrà replicato.</div>
@@ -211,7 +206,7 @@
       <div class="atelier-dim"></div>
     </div>
     <div class="atelier-content">
-      <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CAPITOLO IV — ATELIER</div>
+      <div class="chapter-mark"><span class="chapter-num" aria-hidden="true">04</span><span class="chapter-name">Atelier</span></div>
       <h2>Ogni abito si prova <i>in privato</i>.</h2>
       <div class="body-text body-text-light">Riceviamo su appuntamento nel nostro atelier di Milano. Una stanza, una cliente, il tempo necessario.</div>
       <div class="atelier-cta">
@@ -231,7 +226,7 @@
     <div class="prenota-modal-panel" data-prenota-modal-panel>
       <a href="#" class="prenota-modal-close" data-prenota-modal-close>Chiudi ✕</a>
       <div class="prenota-intro">
-        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CAPITOLO V — PRENOTAZIONE</div>
+        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>PRENOTAZIONE</div>
         <h2>Richiedi la tua <i>prova</i>.</h2>
         <div class="body-text">Lasciaci i tuoi dati: confermiamo data e ora in atelier entro 24 ore.</div>
       </div>
@@ -351,6 +346,6 @@
     <a href="#" class="overlay-close" data-ov-close>Chiudi ✕</a>
   </div>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

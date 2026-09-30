@@ -238,10 +238,11 @@
       chInd.style.opacity = chVisible;
     }
     const colProg = q('[data-collezione-progress]');
-    if (colProg && chInd) {
+    if (colProg) {
+      if (footerEl) chVisible = footerEl.getBoundingClientRect().top <= vh ? 0 : 1;
       colProg.style.opacity = activeChapters[cur] && activeChapters[cur][0] === 'collezione' ? chVisible : 0;
-      const chRect = chInd.getBoundingClientRect();
-      colProg.style.left = (chRect.right + 24) + 'px';
+      // the fixed chapter indicator is gone: align the bar with the page gutter
+      colProg.style.left = chInd ? (chInd.getBoundingClientRect().right + 24) + 'px' : 'clamp(20px, 4vw, 56px)';
     }
   }
 
@@ -657,6 +658,31 @@
     });
   }
 
+  // Mobile: the collection is a native horizontal strip. The hint button
+  // advances it one look at a time; the thin bar below tracks position.
+  function initCollezioneStrip() {
+    const track = q('[data-track]');
+    const hint = q('[data-scroll-hint]');
+    const bar = q('[data-mbar]');
+    if (!track) return;
+    if (hint) {
+      hint.addEventListener('click', () => {
+        const card = track.querySelector('.look-card');
+        const step = card ? card.getBoundingClientRect().width + 20 : track.clientWidth * .8;
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      });
+    }
+    if (bar) {
+      const sync = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        const p = max > 0 ? track.scrollLeft / max : 0;
+        bar.style.transform = `scaleX(${.14 + .86 * p})`;
+      };
+      track.addEventListener('scroll', sync, { passive: true });
+      sync();
+    }
+  }
+
   function initNavToggle() {
     const toggle = q('.nav-toggle');
     const nav = q('.site-nav');
@@ -725,6 +751,7 @@
     initPrenotaForm();
     initPrenotaSelect();
     initReviewStrip();
+    initCollezioneStrip();
 
     // Safari's back/forward cache restores the page exactly as it was left:
     // after goToPage() that means with the curtain closed over everything.
