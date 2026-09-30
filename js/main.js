@@ -111,7 +111,7 @@
 
   // Phones in landscape are wider than 760px but still have Safari's dynamic
   // toolbar, so they get the static mobile layout too (same query as the CSS).
-  const MOBILE_MQ = '(max-width: 760px), (hover: none) and (max-height: 500px)';
+  const MOBILE_MQ = '(max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait)';
   const isMobile = () => window.matchMedia(MOBILE_MQ).matches;
 
   // iOS Safari ignores overflow:hidden on body alone.

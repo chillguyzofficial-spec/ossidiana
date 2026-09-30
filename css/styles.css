@@ -96,7 +96,7 @@ h1, h2, p { margin: 0; }
   text-wrap: pretty;
 }
 .body-text-light { color: var(--muted-4); }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .body-text { font-size: 16px; line-height: 1.65; color: var(--muted-3); }
 }
 
@@ -249,7 +249,7 @@ h1, h2, p { margin: 0; }
 .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .nav-toggle { display: flex; }
   .site-nav {
     position: fixed;
@@ -322,7 +322,7 @@ h1, h2, p { margin: 0; }
 }
 .chapter-indicator [data-ch-l] { text-transform: uppercase; }
 /* On mobile the fixed indicator sits on top of body copy in every section */
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .chapter-indicator { display: none; }
 }
 .chapter-rule {
@@ -356,7 +356,7 @@ h1, h2, p { margin: 0; }
   transform-origin: right center;
   will-change: transform;
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .hero { height: auto; }
   .hero-sticky {
     position: relative;
@@ -537,7 +537,7 @@ h1, h2, p { margin: 0; }
   transform: translateX(24px);
   transition: opacity .3s, transform .3s;
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   /* Su mobile il capitolo Manifesto non e' inline nella home: vive da
      solo su manifesto.html (vedi nav-manifesto-desktop/-mobile). */
   .manifesto { display: none; }
@@ -545,7 +545,7 @@ h1, h2, p { margin: 0; }
 
 /* Richiamo in home verso manifesto.html, al posto del capitolo inline */
 .manifesto-teaser { display: none; }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   /* nero pieno come la Collezione che segue: nessuna cucitura tra le due */
   .manifesto-teaser {
     display: flex;
@@ -741,7 +741,7 @@ h1, h2, p { margin: 0; }
   transform-origin: left;
   transform: scaleX(0);
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .collezione-progress { display: none; }
   .collezione { height: auto; background: var(--bg-curtain); }
   .collezione-sticky {
@@ -934,7 +934,7 @@ h1, h2, p { margin: 0; }
   background: var(--accent);
   flex-shrink: 0;
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .caldera-hotspot { top: 58%; left: 52%; }
   /* label under the dot: beside it, it ran off the screen edge */
   .caldera-hotspot-label {
@@ -1045,7 +1045,7 @@ h1, h2, p { margin: 0; }
   text-transform: uppercase;
   color: var(--accent);
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .atelier-img { object-position: 60% 35%; }
   .atelier-dim {
     background: linear-gradient(0deg, rgba(7, 7, 7, .96) 0%, rgba(7, 7, 7, .68) 45%, rgba(7, 7, 7, .3) 100%);
@@ -1170,7 +1170,7 @@ h1, h2, p { margin: 0; }
   text-transform: uppercase;
   color: var(--accent);
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .storia-img { object-position: 65% 30%; }
   .storia-dim {
     background: linear-gradient(0deg, rgba(7, 7, 7, .96) 0%, rgba(7, 7, 7, .68) 45%, rgba(7, 7, 7, .3) 100%);
@@ -1228,7 +1228,7 @@ h1, h2, p { margin: 0; }
   color: var(--muted-4);
   line-height: 1.3;
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .manifesto-principles { display: grid; }
 }
 
@@ -1238,7 +1238,7 @@ h1, h2, p { margin: 0; }
    display rules on specificity, not just source order. */
 .site-nav .nav-manifesto-mobile,
 .footer-col .nav-manifesto-mobile { display: none; }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .site-nav .nav-manifesto-desktop,
   .footer-col .nav-manifesto-desktop { display: none; }
   .site-nav .nav-manifesto-mobile,
@@ -1603,7 +1603,7 @@ h1, h2, p { margin: 0; }
   gap: 12px;
   max-width: 1400px;
 }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; gap: 8px; }
@@ -1817,7 +1817,7 @@ h1, h2, p { margin: 0; }
   50% { transform: translateX(8px); }
 }
 .collezione-mprogress { display: none; }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .chapter-num { font-size: 84px; }
   .collezione-mprogress {
     display: block;
@@ -1891,7 +1891,7 @@ h1, h2, p { margin: 0; }
 /* ---------- Materia su mobile: capitolo prima della foto, invito dopo ---------- */
 .velluto-mark-m,
 .caldera-cta-m { display: none; }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .velluto-mark-m { display: flex; padding: 64px 24px 32px; background: var(--bg-curtain); }
   .velluto-mark-d { display: none; }
   .caldera-hotspot-label { display: none; }
@@ -1929,7 +1929,7 @@ h1, h2, p { margin: 0; }
 }
 
 /* Hero su mobile: sottotitolo piu' leggibile sopra la foto */
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .hero-subline {
     font-weight: 500;
     font-size: 20px;
@@ -1964,7 +1964,7 @@ h1, h2, p { margin: 0; }
 .storia-review-card blockquote { font-size: 20px; font-weight: 400; line-height: 1.5; color: var(--text); }
 .storia-review-card figcaption { font-size: 11px; letter-spacing: .14em; color: var(--muted-3); }
 .storia-review-card figcaption::before { content: '— '; color: var(--accent); }
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .storia-content h2 { font-size: 44px; line-height: 1.02; }
   .storia-content .body-text { font-size: 17px; }
   .storia-narrative { gap: 56px; }
@@ -1972,7 +1972,7 @@ h1, h2, p { margin: 0; }
 }
 
 /* Materia su mobile: 03 Materia -> testo -> foto -> "Clicca per scoprire" */
-@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+@media (max-width: 760px), (hover: none) and (max-height: 500px), (hover: none) and (max-width: 1024px) and (orientation: portrait) {
   .velluto-sticky { display: flex; flex-direction: column; }
   .velluto-mark-m { order: 0; }
   .velluto-text { order: 1; padding: 0 24px 40px; }
@@ -1981,3 +1981,16 @@ h1, h2, p { margin: 0; }
 }
 /* stessa correzione della Collezione: lo snap non deve incollare la card al bordo */
 .storia-review-strip { scroll-padding-inline: clamp(20px, 8vw, 140px); }
+
+/* Leggibilita': nessun testo sotto gli 11px */
+.hero-scroll,
+.look-card-tag,
+.look-card-cta,
+.footer-col-title,
+.footer-bottom,
+.caldera-hotspot-label,
+.overlay-bespoke,
+.overlay-note-label,
+.prenota-field,
+.prenota-label,
+.atelier-info-label { font-size: 11px; }
