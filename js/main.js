@@ -109,11 +109,35 @@
     return clamp(-b.top / Math.max(1, b.height - window.innerHeight));
   }
 
-  const isMobile = () => window.matchMedia('(max-width: 760px)').matches;
+  // Phones in landscape are wider than 760px but still have Safari's dynamic
+  // toolbar, so they get the static mobile layout too (same query as the CSS).
+  const MOBILE_MQ = '(max-width: 760px), (hover: none) and (max-height: 500px)';
+  const isMobile = () => window.matchMedia(MOBILE_MQ).matches;
+
+  // iOS Safari ignores overflow:hidden on body alone.
+  function lockScroll(on) {
+    document.documentElement.style.overflow = on ? 'hidden' : '';
+    document.body.style.overflow = on ? 'hidden' : '';
+  }
+
+  // Inline styles written by the desktop scroll rig. When the viewport drops
+  // to the mobile layout (e.g. a phone rotated back to portrait) they must be
+  // wiped, or the collection track stays shifted and the hero title invisible.
+  const RIG_SELECTOR = '[data-hero-img],[data-hero-title],[data-hero-dim],[data-hero-veil],.word,' +
+    '[data-manifesto-img],[data-manifesto-veil],[data-manifesto-numeral],[data-manifesto-eyebrow],' +
+    '[data-manifesto-fact],[data-manifesto-cta],[data-track],[data-par],[data-bar],' +
+    '[data-clip],[data-clip-img],[data-clip-pre],[data-clip-text]';
+  let wasMobile = null;
 
   function update() {
     const vh = window.innerHeight;
     const mobile = isMobile();
+    if (mobile && wasMobile !== true) {
+      qa(RIG_SELECTOR).forEach((el) => {
+        ['transform', 'opacity', 'clipPath', 'letterSpacing'].forEach((p) => { el.style[p] = ''; });
+      });
+    }
+    wasMobile = mobile;
 
     // Hero, Manifesto, Collezione and Velluto use a pinned scroll-scrubbed
     // animation on desktop. On mobile that rig fights with the browser's
@@ -285,8 +309,9 @@
     const d = 1.1 * SPEED;
     const ov = q('[data-ov]'), bg = q('[data-ov-bg]'), im = q('[data-ov-img]'), pn = q('[data-ov-panel]'), cx = q('[data-ov-close]');
 
-    document.body.style.overflow = 'hidden';
+    lockScroll(true);
     fillOverlay(i);
+    pn.scrollTop = 0;
     im.src = looks[i].src;
     im.alt = looks[i].name;
     Object.assign(im.style, {
@@ -310,7 +335,7 @@
     bg.style.opacity = 1;
     Object.assign(pn.style, {
       width: narrow ? '100vw' : '50vw',
-      top: narrow ? '38vh' : '0',
+      top: narrow ? '45vh' : '0',
       transition: `opacity .8s ${d * .7}s, transform 1s ${d * .7}s ${EASE_BEZIER}`,
       opacity: 1,
       transform: 'none'
@@ -331,7 +356,7 @@
     const d = 1.1 * SPEED;
     const ov = q('[data-ov]'), bg = q('[data-ov-bg]'), im = q('[data-ov-img]'), pn = q('[data-ov-panel]'), cx = q('[data-ov-close]');
 
-    document.body.style.overflow = 'hidden';
+    lockScroll(true);
     q('[data-ov-eyebrow]').textContent = 'PEZZO UNICO · ESEMPLARE 1/1';
     q('[data-ov-name]').textContent = caldera.name;
     q('[data-ov-mat]').textContent = caldera.mat;
@@ -339,6 +364,7 @@
     q('[data-ov-note]').textContent = caldera.note;
     q('[data-ov-price]').textContent = caldera.price;
     buildOverlayViews(caldera);
+    pn.scrollTop = 0;
     im.src = caldera.src;
     im.alt = caldera.name;
 
@@ -368,7 +394,7 @@
     bg.style.opacity = 1;
     Object.assign(pn.style, {
       width: narrow ? '100vw' : '50vw',
-      top: narrow ? '38vh' : '0',
+      top: narrow ? '45vh' : '0',
       transition: `opacity .8s ${d * .7}s, transform 1s ${d * .7}s ${EASE_BEZIER}`,
       opacity: 1,
       transform: 'none'
@@ -444,7 +470,7 @@
       if (img) img.style.opacity = 1;
       Object.assign(im.style, { transition: 'none', opacity: 0, width: '0px', height: '0px', transform: 'none' });
       ov.style.pointerEvents = 'none';
-      document.body.style.overflow = '';
+      lockScroll(false);
     }, 250 + d * 1000);
   }
 
@@ -524,7 +550,7 @@
 
   function openPrenotaModal(lookLabel) {
     const m = q('[data-prenota-modal]'), bg = q('[data-prenota-modal-bg]'), pn = q('[data-prenota-modal-panel]');
-    document.body.style.overflow = 'hidden';
+    lockScroll(true);
     m.style.pointerEvents = 'auto';
     m.style.transition = 'opacity .4s';
     m.style.opacity = 1;
@@ -540,7 +566,7 @@
     m.style.opacity = 0;
     m.style.pointerEvents = 'none';
     pn.style.transform = 'translateY(24px) scale(.98)';
-    document.body.style.overflow = '';
+    lockScroll(false);
     closePrenotaSelect();
   }
 
@@ -560,7 +586,7 @@
     q('[data-info-body]').innerHTML = page.body.map((p) => `<p>${p}</p>`).join('');
 
     const m = q('[data-info-modal]'), pn = q('[data-info-modal-panel]');
-    document.body.style.overflow = 'hidden';
+    lockScroll(true);
     m.style.pointerEvents = 'auto';
     m.style.transition = 'opacity .4s';
     m.style.opacity = 1;
@@ -575,7 +601,7 @@
     m.style.opacity = 0;
     m.style.pointerEvents = 'none';
     pn.style.transform = 'translateY(24px) scale(.98)';
-    document.body.style.overflow = '';
+    lockScroll(false);
   }
 
   function setPrenotaLook(label) {
@@ -643,7 +669,7 @@
       if (header) header.classList.toggle('nav-is-open', open);
       const chInd = q('.chapter-indicator');
       if (chInd) chInd.style.visibility = open ? 'hidden' : '';
-      document.body.style.overflow = open ? 'hidden' : '';
+      lockScroll(open);
     };
     const close = () => setOpen(false);
     toggle.addEventListener('click', () => setOpen(!nav.classList.contains('nav-open')));
@@ -699,6 +725,20 @@
     initPrenotaForm();
     initPrenotaSelect();
     initReviewStrip();
+
+    // Safari's back/forward cache restores the page exactly as it was left:
+    // after goToPage() that means with the curtain closed over everything.
+    window.addEventListener('pageshow', (e) => {
+      if (!e.persisted) return;
+      const cur = q('[data-curtain]');
+      if (cur) { cur.style.transition = 'none'; cur.style.transform = 'translateY(-100%)'; }
+      const w = q('[data-wipe]');
+      if (w) { w.style.transition = 'none'; w.style.opacity = 0; }
+      const nav = q('.site-nav');
+      if (nav && nav.classList.contains('nav-open')) q('.nav-toggle').click();
+      lockScroll(false);
+      update();
+    });
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
