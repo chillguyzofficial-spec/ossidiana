@@ -719,8 +719,7 @@
       card.addEventListener('click', (e) => openLook(Number(card.dataset.look), e));
     });
 
-    const calderaHotspot = q('[data-caldera-look]');
-    if (calderaHotspot) calderaHotspot.addEventListener('click', openCaldera);
+    qa('[data-caldera-look]').forEach((el) => el.addEventListener('click', openCaldera));
 
     initPrenotaCalendar();
 
