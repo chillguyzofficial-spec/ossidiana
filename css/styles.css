@@ -1938,3 +1938,46 @@ h1, h2, p { margin: 0; }
     text-shadow: 0 1px 12px rgba(0, 0, 0, .75);
   }
 }
+
+/* ---------- Storia: leggibilita' e gerarchia del testo ---------- */
+.storia .eyebrow-mono { color: var(--muted-3); font-size: 12px; }
+.storia-content h2 { font-size: clamp(44px, 5.4vw, 80px); }
+.storia-content .body-text { font-size: 18px; font-weight: 400; color: var(--muted-4); }
+.storia-narrative-col h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.1;
+  color: var(--text);
+}
+.storia-narrative-col p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--muted-4);
+}
+.storia-narrative-col p:first-of-type::first-line { color: var(--text); }
+.storia-reviews-intro h3 { font-size: clamp(32px, 3.4vw, 44px); color: var(--text); }
+.storia-review-card { padding: 26px 24px; gap: 20px; width: min(82vw, 320px); }
+.storia-review-card blockquote { font-size: 20px; font-weight: 400; line-height: 1.5; color: var(--text); }
+.storia-review-card figcaption { font-size: 11px; letter-spacing: .14em; color: var(--muted-3); }
+.storia-review-card figcaption::before { content: '— '; color: var(--accent); }
+@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+  .storia-content h2 { font-size: 44px; line-height: 1.02; }
+  .storia-content .body-text { font-size: 17px; }
+  .storia-narrative { gap: 56px; }
+  .storia-narrative-col p { font-size: 17px; }
+}
+
+/* Materia su mobile: 03 Materia -> testo -> foto -> "Clicca per scoprire" */
+@media (max-width: 760px), (hover: none) and (max-height: 500px) {
+  .velluto-sticky { display: flex; flex-direction: column; }
+  .velluto-mark-m { order: 0; }
+  .velluto-text { order: 1; padding: 0 24px 40px; }
+  .velluto-clip { order: 2; }
+  .caldera-cta-m { order: 3; align-self: flex-start; margin-bottom: 56px; }
+}
+/* stessa correzione della Collezione: lo snap non deve incollare la card al bordo */
+.storia-review-strip { scroll-padding-inline: clamp(20px, 8vw, 140px); }
