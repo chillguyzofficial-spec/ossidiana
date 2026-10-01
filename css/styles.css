@@ -237,6 +237,10 @@ button { font: inherit; color: inherit; }
 @media (max-width: 900px) {
   .nav-main { display: none; }
   .nav-toggle { display: block; }
+  /* su telefono/tablet l'header sta in cima alla pagina e scorre via con lei: su iPhone gli
+     header fissi si spostano quando la barra di Safari si apre/chiude e coprono il testo */
+  .site-header { position: absolute; }
+  html { scroll-padding-top: 0; }
 }
 @media (min-width: 901px) {
   .menu-panel { display: none; }
