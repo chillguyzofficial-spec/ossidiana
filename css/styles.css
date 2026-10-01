@@ -237,12 +237,11 @@ button { font: inherit; color: inherit; }
 @media (max-width: 900px) {
   .nav-main { display: none; }
   .nav-toggle { display: block; }
-  /* telefono/tablet: header nel flusso in cima, fisso solo dopo averlo superato (js), sfondo pieno, nessuna
+  /* telefono/tablet: header sempre visibile, sticky dentro la pagina, sfondo pieno, nessuna
      trasparenza o transizione). Occupa il suo spazio in cima, quindi non può coprire il testo:
      gli header fixed/trasparenti su iPhone si spostavano con la barra di Safari. */
   .site-header,
-  .site-header.is-solid { position: relative; background: #000; border-bottom-color: var(--line); transition: none; }
-  .header-stuck .site-header { position: fixed; top: 0; left: 0; right: 0; }
+  .site-header.is-solid { position: sticky; top: 0; background: #000; border-bottom-color: var(--line); transition: none; }
 }
 @media (min-width: 901px) {
   .menu-panel { display: none; }
