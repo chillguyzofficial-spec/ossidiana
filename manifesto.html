@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Ossidiana — Manifesto</title>
 <meta name="description" content="Il manifesto di Ossidiana: pochi gesti, materia densa, nessun rumore. Un solo nero, cucito a mano a Milano.">
+<meta name="theme-color" content="#000000">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -24,210 +25,154 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=19">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=35">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-  <!-- Curtain -->
-  <div class="curtain" data-curtain>
-    <div class="curtain-wipe" data-wipe style="opacity:1">Manifesto</div>
-  </div>
-
-  <!-- Header -->
-  <div class="header-scrim" aria-hidden="true"></div>
   <header class="site-header">
-    <a href="index.html" class="logo" data-goto-page="index.html" data-label="Home">OSSIDIANA</a>
-    <nav class="site-nav">
-      <a href="index.html" data-goto-page="index.html" data-label="Home">Home</a>
-      <a href="manifesto.html" class="is-current" aria-current="page">Manifesto</a>
-      <a href="index.html#collezione" data-goto-page="index.html#collezione" data-label="La collezione">Collezione</a>
-      <a href="index.html#atelier" data-goto-page="index.html#atelier" data-label="Atelier">Atelier</a>
-      <a href="storia.html" data-goto-page="storia.html" data-label="Storia">Storia</a>
-      <a href="#" data-prenota-open>Prenota</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="nav-main" aria-label="Principale">
+      <a href="index.html#collezione">Collezione</a>
+      <a href="index.html#atelier">Atelier</a>
+      <a href="manifesto.html" aria-current="page">Manifesto</a>
+      <a href="storia.html">Storia</a>
     </nav>
-    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="index.html" class="logo" aria-label="Ossidiana — home">OSSIDIANA</a>
+    <div class="nav-side">
+      <a href="#" data-prenota>Prenota</a>
+    </div>
   </header>
 
-  <!-- Manifesto -->
-  <section class="storia">
-    <div class="storia-hero manifesto-page-hero">
-      <div class="storia-media">
-        <img class="storia-img" src="assets/manifesto-bg.webp" alt="Dettaglio: spalline in piuma nera su abiti Ossidiana, roccia vulcanica" loading="eager">
-        <div class="storia-dim"></div>
-      </div>
-      <div class="storia-content">
-        <div class="chapter-mark"><span class="chapter-name">Manifesto</span></div>
-        <h2>Ossidiana nasce quando la lava incontra l'aria e si raffredda in un istante.</h2>
-        <div class="body-text body-text-light">Disegniamo abiti allo stesso modo: pochi gesti, materia densa, nessun rumore.</div>
-        <div class="manifesto-page-fact">Fondata a Milano nel 1928 · meno di venti abiti l'anno.</div>
-        <a href="storia.html" class="btn btn-outline" data-goto-page="storia.html" data-label="Storia">La nostra storia</a>
-      </div>
-    </div>
+  <nav class="menu-panel" id="menu" aria-label="Menu">
+      <a href="index.html#collezione">Collezione</a>
+      <a href="index.html#atelier">Atelier</a>
+      <a href="manifesto.html" aria-current="page">Manifesto</a>
+      <a href="storia.html">Storia</a>
+      <a href="#" data-prenota>Prenota una prova</a>
+      <div class="menu-info">Via Borgonuovo, Milano<br>Lunedì – Sabato, 10:00 – 19:00<br>Solo su appuntamento</div>
+  </nav>
 
-    <!-- Perché ossidiana -->
-    <div class="mf-block">
-      <div class="mf-head">
-        <span class="mf-label">La pietra</span>
-        <h3>Una pietra che non ha avuto il tempo di diventare <i>cristallo</i>.</h3>
-        <p class="mf-intro">L'ossidiana è vetro vulcanico. Nasce quando una lava ricca di silice si raffredda così in fretta che la materia non riesce a ordinarsi in cristalli. Da quella fretta vengono tre proprietà, e da ognuna un modo di lavorare.</p>
+  <main>
+    <section class="page-hero" style="--ar:16/9;--pos:50% 50%">
+      <img src="assets/manifesto-hero.webp" alt="Due abiti neri su manichino tra rocce vulcaniche e lava" fetchpriority="high" width="2048" height="1152">
+      <div class="page-hero-text">
+        <span class="label">Manifesto</span>
+        <h1 class="title">Ossidiana nasce quando la lava incontra l'aria e si raffredda <i>in un istante</i>.</h1>
+        <p class="text">Disegniamo abiti allo stesso modo: pochi gesti, materia densa, nessun rumore. Fondata a Milano nel 1928, meno di venti abiti l'anno.</p>
       </div>
-      <ol class="mf-props">
-        <li>
-          <span class="mf-prop">Nessun cristallo</span>
-          <p>Senza una struttura interna che si ripete, ogni frammento di ossidiana è diverso dall'altro. Per questo non partiamo da una taglia: partiamo dal corpo di chi indosserà l'abito.</p>
-        </li>
-        <li>
-          <span class="mf-prop">Frattura concoide</span>
-          <p>Si spezza in curve lisce, con bordi più sottili di una lama chirurgica. È la precisione che cerchiamo nel taglio: una linea sola, netta, senza ripensamenti.</p>
-        </li>
-        <li>
-          <span class="mf-prop">Specchio nero</span>
-          <p>Per millenni è stata levigata per farne specchi. Un abito Ossidiana non deve nascondere chi lo porta: deve restituirne l'immagine, più nitida.</p>
-        </li>
-      </ol>
-    </div>
+    </section>
 
-    <!-- Il tempo di un abito -->
-    <div class="mf-block">
-      <div class="mf-head">
-        <span class="mf-label">Il processo</span>
-        <h3>Il tempo di un abito, <i>senza scorciatoie</i>.</h3>
-        <p class="mf-intro">Dalle prime misure alla consegna passano da sei a dodici settimane. Per i capi con piume o strutture scultoree, fino a otto mesi.</p>
-      </div>
-      <ol class="mf-steps">
-        <li><span>01</span><div><b>Il primo incontro</b><p>Un'ora in atelier. Parliamo di dove porterai l'abito, prima ancora di come dovrà essere.</p></div></li>
-        <li><span>02</span><div><b>Le misure</b><p>Oltre trenta misure prese a mano: busto, vita, fianchi, lunghezze, e il modo in cui ti muovi.</p></div></li>
-        <li><span>03</span><div><b>La prova in tela</b><p>Prima del tessuto vero, l'abito viene costruito in tela grezza e corretto direttamente sul corpo.</p></div></li>
-        <li><span>04</span><div><b>Il taglio</b><p>Solo ora si taglia il tessuto definitivo. Una volta sola: velluto e seta non perdonano.</p></div></li>
-        <li><span>05</span><div><b>La seconda prova</b><p>Rifiniture su lunghezze, vestibilità e dettagli, finché l'abito cade come deve.</p></div></li>
-        <li><span>06</span><div><b>La consegna</b><p>In atelier, con l'abito pronto e un'ultima occhiata allo specchio.</p></div></li>
-      </ol>
-    </div>
-
-    <!-- Cosa non facciamo -->
-    <div class="mf-block">
-      <div class="mf-head">
-        <span class="mf-label">Le rinunce</span>
-        <h3>Quello che abbiamo scelto di <i>non fare</i>.</h3>
-      </div>
-      <ul class="mf-nots">
-        <li><b>Niente saldi.</b> Un abito costruito su di te non perde valore a fine stagione.</li>
-        <li><b>Niente taglie standard.</b> I prezzi sul sito sono il punto di partenza, le misure si prendono in prova.</li>
-        <li><b>Niente produzione in serie.</b> Meno di venti abiti l'anno, tutti cuciti a mano a Milano.</li>
-        <li><b>Niente repliche.</b> Caldera esiste in un solo esemplare, e così resterà.</li>
-        <li><b>Niente vendita online.</b> Si prova, si sceglie e si conferma in atelier.</li>
+    <section class="section">
+      <ul class="stats" data-reveal>
+        <li><b>1928</b><span>Fondata a Milano</span></li>
+        <li><b>&lt; 20</b><span>Abiti l'anno</span></li>
+        <li><b>30+</b><span>Misure prese a mano</span></li>
+        <li><b>1/1</b><span>Caldera, pezzo unico</span></li>
       </ul>
-      <a href="#" class="btn btn-accent mf-cta" data-prenota-open>Prenota una prova</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Prenota -->
-  <div class="prenota-modal" data-prenota-modal>
-    <div class="prenota-modal-bg" data-prenota-modal-bg></div>
-    <div class="prenota-modal-panel" data-prenota-modal-panel>
-      <a href="#" class="prenota-modal-close" data-prenota-modal-close>Chiudi ✕</a>
-      <div class="prenota-intro">
-        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>PRENOTAZIONE</div>
-        <h2>Richiedi la tua <i>prova</i>.</h2>
-        <div class="body-text">Lasciaci i tuoi dati: confermiamo data e ora in atelier entro 24 ore.</div>
+    <!-- Ogni capitolo: una foto a tutta larghezza, poi testo centrato -->
+    <section class="chapter chapter-text-only" aria-labelledby="cap-pietra">
+      <div class="chapter-body">
+        <div class="chapter-head" data-reveal>
+          <span class="label">La pietra</span>
+          <h2 class="title" id="cap-pietra">Una pietra che non ha avuto il tempo di diventare <i>cristallo</i>.</h2>
+          <p class="text">L'ossidiana è vetro vulcanico. Nasce quando una lava ricca di silice si raffredda così in fretta che la materia non riesce a ordinarsi in cristalli. Da quella fretta vengono tre proprietà, e da ognuna un modo di lavorare.</p>
+        </div>
+        <ol class="props">
+          <li data-reveal><span class="prop-n">I</span><b>Nessun cristallo</b><p>Senza una struttura interna che si ripete, ogni frammento di ossidiana è diverso dall'altro. Per questo non partiamo da una taglia: partiamo dal corpo di chi indosserà l'abito.</p></li>
+          <li data-reveal><span class="prop-n">II</span><b>Frattura concoide</b><p>Si spezza in curve lisce, con bordi più sottili di una lama chirurgica. È la precisione che cerchiamo nel taglio: una linea sola, netta, senza ripensamenti.</p></li>
+          <li data-reveal><span class="prop-n">III</span><b>Specchio nero</b><p>Per millenni è stata levigata per farne specchi. Un abito Ossidiana non deve nascondere chi lo porta: deve restituirne l'immagine, più nitida.</p></li>
+        </ol>
       </div>
-      <form class="prenota-form" data-prenota-form>
-        <div class="prenota-row">
-          <label class="prenota-field">Nome e cognome<input type="text" name="nome" required></label>
-          <label class="prenota-field">Email<input type="email" name="email" required></label>
-        </div>
-        <div class="prenota-field">
-          <span class="prenota-label">Capo di interesse</span>
-          <div class="prenota-select" data-prenota-select>
-            <button type="button" class="prenota-select-btn" data-prenota-select-btn>
-              <span data-prenota-select-label>Nessuna preferenza</span>
-              <span class="prenota-select-arrow">▾</span>
-            </button>
-            <ul class="prenota-select-list" data-prenota-select-list>
-              <li data-value="">Nessuna preferenza</li>
-              <li data-value="01 — Ombra">01 — Ombra</li>
-              <li data-value="02 — Nocturne">02 — Nocturne</li>
-              <li data-value="03 — Eclissi">03 — Eclissi</li>
-              <li data-value="04 — Venere">04 — Venere</li>
-              <li data-value="05 — Corvo">05 — Corvo</li>
-              <li data-value="06 — Obsidian Wing">06 — Obsidian Wing</li>
-              <li data-value="Caldera — pezzo unico">Caldera — pezzo unico</li>
-            </ul>
-          </div>
-        </div>
-        <div class="prenota-field">
-          <span class="prenota-label">Giorno preferito</span>
-          <div class="prenota-calendar" data-prenota-calendar>
-            <div class="prenota-cal-head">
-              <button type="button" class="prenota-cal-nav" data-cal-prev aria-label="Mese precedente">‹</button>
-              <span data-cal-month></span>
-              <button type="button" class="prenota-cal-nav" data-cal-next aria-label="Mese successivo">›</button>
-            </div>
-            <div class="prenota-cal-dow">
-              <span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span>
-            </div>
-            <div class="prenota-cal-grid" data-cal-grid></div>
-          </div>
-        </div>
-        <label class="prenota-field"><span>Messaggio <span class="prenota-optional">(opzionale)</span></span><textarea name="messaggio" rows="3"></textarea></label>
-        <button type="submit" class="btn btn-accent">Invia richiesta</button>
-      </form>
-    </div>
-  </div>
+    </section>
 
-  <!-- Info modal (guida taglie, termini, privacy, cookie) -->
-  <div class="info-modal" data-info-modal>
-    <div class="prenota-modal-bg" data-info-modal-bg></div>
-    <div class="prenota-modal-panel info-modal-panel" data-info-modal-panel>
-      <a href="#" class="prenota-modal-close" data-info-modal-close>Chiudi ✕</a>
-      <div class="eyebrow eyebrow-mono" data-info-eyebrow><span class="eyebrow-rule"></span></div>
-      <h2 data-info-title></h2>
-      <div class="info-body" data-info-body></div>
-    </div>
-  </div>
+    <section class="chapter" aria-labelledby="cap-processo">
+      <figure class="chapter-media" style="--ar:16/9" data-reveal>
+        <img src="assets/processo-cucito.webp" alt="Mani di una sarta che cuciono a mano un abito in seta nera con l'etichetta Ossidiana" loading="lazy" width="2048" height="1152">
+      </figure>
+      <div class="chapter-body">
+        <div class="chapter-head" data-reveal>
+          <span class="label">Il processo</span>
+          <h2 class="title" id="cap-processo">Il tempo di un abito, <i>senza scorciatoie</i>.</h2>
+          <p class="text">Dalle prime misure alla consegna passano da sei a dodici settimane. Per i capi con piume o strutture scultoree, fino a otto mesi.</p>
+        </div>
+        <ol class="step-cards">
+          <li data-reveal><span>01</span><b>Il primo incontro</b><p>Un'ora in atelier. Parliamo di dove porterai l'abito, prima ancora di come dovrà essere.</p></li>
+          <li data-reveal><span>02</span><b>Le misure</b><p>Oltre trenta misure prese a mano: busto, vita, fianchi, lunghezze, e il modo in cui ti muovi.</p></li>
+          <li data-reveal><span>03</span><b>La prova in tela</b><p>Prima del tessuto vero, l'abito viene costruito in tela grezza e corretto direttamente sul corpo.</p></li>
+          <li data-reveal><span>04</span><b>Il taglio</b><p>Solo ora si taglia il tessuto definitivo. Una volta sola: velluto e seta non perdonano.</p></li>
+          <li data-reveal><span>05</span><b>La seconda prova</b><p>Rifiniture su lunghezze, vestibilità e dettagli, finché l'abito cade come deve.</p></li>
+          <li data-reveal><span>06</span><b>La consegna</b><p>In atelier, con l'abito pronto e un'ultima occhiata allo specchio.</p></li>
+        </ol>
+      </div>
+    </section>
 
-  <!-- Footer -->
+    <section class="section statement" aria-label="Citazione">
+      <div class="statement-inner" data-reveal>
+        <p class="quote">Pochi gesti, materia densa, <i>nessun rumore</i>.</p>
+      </div>
+    </section>
+
+    <section class="chapter" aria-labelledby="cap-rinunce">
+      <figure class="chapter-media" style="--ar:16/9" data-reveal>
+        <img src="assets/rinunce-etichetta.webp" alt="Etichetta Ossidiana 1/1 numero 07 cucita a mano" loading="lazy" width="2048" height="1152">
+      </figure>
+      <div class="chapter-body">
+        <div class="chapter-head" data-reveal>
+          <span class="label">Le rinunce</span>
+          <h2 class="title" id="cap-rinunce">Quello che abbiamo scelto di <i>non fare</i>.</h2>
+        </div>
+        <ul class="nots" data-reveal>
+          <li><b>Niente saldi.</b> Un abito costruito su di te non perde valore a fine stagione.</li>
+          <li><b>Niente taglie standard.</b> I prezzi sono il punto di partenza, le misure si prendono in prova.</li>
+          <li><b>Niente produzione in serie.</b> Meno di venti abiti l'anno, tutti cuciti a mano a Milano.</li>
+          <li><b>Niente repliche.</b> Caldera esiste in un solo esemplare, e così resterà.</li>
+          <li><b>Niente vendita online.</b> Si prova, si sceglie e si conferma in atelier.</li>
+        </ul>
+        <div class="chapter-cta" data-reveal><a href="#" class="btn" data-prenota>Prenota una prova</a></div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">OSSIDIANA</div>
-        <div class="footer-newsletter">
-          <div class="footer-newsletter-title">Lettere dall'atelier</div>
-          <form class="newsletter-form" data-newsletter-form>
-            <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
-            <button type="submit">Iscriviti</button>
-          </form>
-        </div>
+        <div class="newsletter-title">Lettere dall'atelier</div>
+        <form class="newsletter-form" data-newsletter-form>
+          <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
+          <button type="submit">Iscriviti</button>
+        </form>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Assistenza</div>
-        <a href="#" data-info-open="taglie">Guida alle taglie</a>
-        <a href="#" data-prenota-open>Contatti</a>
+        <span class="label">Assistenza</span>
+        <button type="button" data-prenota>Prenota una prova</button>
+        <button type="button" data-info="taglie">Guida alle taglie</button>
+        <a href="tel:+390287345521">+39 02 8734 5521</a>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Il brand</div>
-        <a href="manifesto.html" class="is-current" aria-current="page">Manifesto</a>
-        <a href="storia.html" data-goto-page="storia.html" data-label="Storia">Storia</a>
-        <a href="index.html#atelier" data-goto-page="index.html#atelier" data-label="Atelier">Atelier</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <span class="label">La maison</span>
+        <a href="index.html#collezione">Collezione</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="storia.html">Storia</a>
+        <a href="#" rel="noopener">Instagram</a>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Legale</div>
-        <a href="#" data-info-open="termini">Termini e condizioni</a>
-        <a href="#" data-info-open="privacy">Privacy policy</a>
-        <a href="#" data-info-open="cookie">Cookie policy</a>
+        <span class="label">Legale</span>
+        <button type="button" data-info="termini">Termini e condizioni</button>
+        <button type="button" data-info="privacy">Privacy policy</button>
+        <button type="button" data-info="cookie">Cookie policy</button>
       </div>
     </div>
-    <div class="footer-divider"></div>
     <div class="footer-bottom">
       <span>© 2026 Ossidiana S.r.l.</span>
       <span>Via Borgonuovo · 20121 Milano (MI) · P.IVA IT 12345678901 · REA MI-2284591</span>
     </div>
   </footer>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
 </html>

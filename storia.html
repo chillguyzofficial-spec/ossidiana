@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Ossidiana — Storia</title>
 <meta name="description" content="La storia dell'atelier Ossidiana: fondato a Milano nel 1928, tre generazioni della stessa famiglia, ancora cucito a mano.">
+<meta name="theme-color" content="#000000">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -24,181 +25,122 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wdth,wght@62..125,300;62..125,400;62..125,500;62..125,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=19">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=35">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-  <!-- Curtain -->
-  <div class="curtain" data-curtain>
-    <div class="curtain-wipe" data-wipe style="opacity:1">Storia</div>
-  </div>
-
-  <!-- Header -->
-  <div class="header-scrim" aria-hidden="true"></div>
   <header class="site-header">
-    <a href="index.html" class="logo" data-goto-page="index.html" data-label="Home">OSSIDIANA</a>
-    <nav class="site-nav">
-      <a href="index.html" data-goto-page="index.html" data-label="Home">Home</a>
-      <a href="index.html#manifesto" class="nav-manifesto-desktop" data-goto-page="index.html#manifesto" data-label="Manifesto">Manifesto</a>
-      <a href="manifesto.html" class="nav-manifesto-mobile" data-goto-page="manifesto.html" data-label="Manifesto">Manifesto</a>
-      <a href="index.html#collezione" data-goto-page="index.html#collezione" data-label="La collezione">Collezione</a>
-      <a href="index.html#atelier" data-goto-page="index.html#atelier" data-label="Atelier">Atelier</a>
-      <a href="storia.html" class="is-current" aria-current="page">Storia</a>
-      <a href="#" data-prenota-open>Prenota</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="nav-main" aria-label="Principale">
+      <a href="index.html#collezione">Collezione</a>
+      <a href="index.html#atelier">Atelier</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="storia.html" aria-current="page">Storia</a>
     </nav>
-    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="index.html" class="logo" aria-label="Ossidiana — home">OSSIDIANA</a>
+    <div class="nav-side">
+      <a href="#" data-prenota>Prenota</a>
+    </div>
   </header>
 
-  <!-- Storia -->
-  <section class="storia">
-    <div class="storia-hero">
-      <div class="storia-media">
-        <img class="storia-img" src="assets/storia-bg.webp" alt="L'atelier privato di Ossidiana in Via Borgonuovo, Milano, fondato nel 1928" loading="eager">
-        <div class="storia-dim"></div>
-      </div>
-      <div class="storia-content">
-        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>STORIA</div>
-        <h2>Dal 1928, <i>un'unica famiglia</i>.</h2>
-        <div class="body-text body-text-light">Ossidiana nasce come atelier privato in Via Borgonuovo, a Milano. Tre generazioni più tardi, si cuce ancora a mano, un abito alla volta, nella stessa stanza.</div>
-      </div>
-    </div>
+  <nav class="menu-panel" id="menu" aria-label="Menu">
+      <a href="index.html#collezione">Collezione</a>
+      <a href="index.html#atelier">Atelier</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="storia.html" aria-current="page">Storia</a>
+      <a href="#" data-prenota>Prenota una prova</a>
+      <div class="menu-info">Via Borgonuovo, Milano<br>Lunedì – Sabato, 10:00 – 19:00<br>Solo su appuntamento</div>
+  </nav>
 
-    <div class="storia-narrative">
-      <div class="storia-narrative-col">
-        <h3>Le origini</h3>
-        <p>Ossidiana apre nel 1928 in Via Borgonuovo, per volontà di Adele Fontana, sarta di scena al Teatro alla Scala. La prima cliente, una soprano, le chiese un abito «che si vedesse anche dall'ultima fila»: nacque così il nero pesante, quasi liquido, che porta ancora il nome dell'atelier.</p>
-        <p>Suo figlio Cesare prese il suo posto nel 1961, sua nipote Marta nel 1994. Tre generazioni, la stessa porta senza insegna, lo stesso campanello d'ottone consumato da un secolo di mani.</p>
+  <main>
+    <section class="page-hero" style="--ar:16/9;--pos:50% 50%">
+      <img src="assets/storia-laboratorio.webp" alt="Il laboratorio dell'atelier: manichino, forbici e cartamodelli sul tavolo da taglio" fetchpriority="high" width="2048" height="1152">
+      <div class="page-hero-text">
+        <span class="label">Storia</span>
+        <h1 class="title">Dal 1928, <i>un'unica famiglia</i>.</h1>
+        <p class="text">Ossidiana nasce come atelier privato in Via Borgonuovo, a Milano. Tre generazioni più tardi si cuce ancora a mano, un abito alla volta, nella stessa stanza.</p>
       </div>
-      <div class="storia-narrative-col">
-        <h3>Il mestiere</h3>
-        <p>Ogni abito nasce da un disegno a matita, poi da un cartamodello in carta nera, poi da settimane di lavorazione — piuma per piuma, cucitura per cucitura, sullo stesso tavolo da taglio del 1928, ancora segnato dai tagli delle forbici di Adele.</p>
-        <p>Meno di venti abiti l'anno, ciascuno numerato a mano sull'etichetta interna. Nessuna produzione in serie, nessuna replica: il numero uno di ogni modello è anche l'ultimo.</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="storia-craft">
-      <div class="storia-craft-item"><img src="assets/storia-sewing.webp" alt="Le mani che cuciono ogni abito Ossidiana, a mano" loading="lazy"></div>
-      <div class="storia-craft-item"><img src="assets/storia-swatches.webp" alt="Materiali dell'atelier: piuma, velluto, raso e seta neri" loading="lazy"></div>
-      <div class="storia-craft-item"><img src="assets/storia-label.webp" alt="L'etichetta Ossidiana, cucita a mano su ogni capo" loading="lazy"></div>
-    </div>
-
-    <div class="storia-reviews">
-      <div class="storia-reviews-intro">
-        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>CLIENTI DELL'ATELIER</div>
-        <h3>Chi ci ha vestito.</h3>
-      </div>
-      <div class="storia-review-strip" data-review-strip></div>
-    </div>
-  </section>
-
-  <!-- Prenota -->
-  <div class="prenota-modal" data-prenota-modal>
-    <div class="prenota-modal-bg" data-prenota-modal-bg></div>
-    <div class="prenota-modal-panel" data-prenota-modal-panel>
-      <a href="#" class="prenota-modal-close" data-prenota-modal-close>Chiudi ✕</a>
-      <div class="prenota-intro">
-        <div class="eyebrow eyebrow-mono"><span class="eyebrow-rule"></span>PRENOTAZIONE</div>
-        <h2>Richiedi la tua <i>prova</i>.</h2>
-        <div class="body-text">Lasciaci i tuoi dati: confermiamo data e ora in atelier entro 24 ore.</div>
-      </div>
-      <form class="prenota-form" data-prenota-form>
-        <div class="prenota-row">
-          <label class="prenota-field">Nome e cognome<input type="text" name="nome" required></label>
-          <label class="prenota-field">Email<input type="email" name="email" required></label>
+    <section class="section">
+      <div class="narrow two-cols prose">
+        <div data-reveal>
+          <h3>Le origini</h3>
+          <p>Ossidiana apre nel 1928 in Via Borgonuovo, per volontà di Adele Fontana, sarta di scena al Teatro alla Scala. La prima cliente, una soprano, le chiese un abito «che si vedesse anche dall'ultima fila»: nacque così il nero pesante, quasi liquido, che porta ancora il nome dell'atelier.</p>
+          <p>Suo figlio Cesare prese il suo posto nel 1961, sua nipote Marta nel 1994. Tre generazioni, la stessa porta senza insegna, lo stesso campanello d'ottone consumato da un secolo di mani.</p>
         </div>
-        <div class="prenota-field">
-          <span class="prenota-label">Capo di interesse</span>
-          <div class="prenota-select" data-prenota-select>
-            <button type="button" class="prenota-select-btn" data-prenota-select-btn>
-              <span data-prenota-select-label>Nessuna preferenza</span>
-              <span class="prenota-select-arrow">▾</span>
-            </button>
-            <ul class="prenota-select-list" data-prenota-select-list>
-              <li data-value="">Nessuna preferenza</li>
-              <li data-value="01 — Ombra">01 — Ombra</li>
-              <li data-value="02 — Nocturne">02 — Nocturne</li>
-              <li data-value="03 — Eclissi">03 — Eclissi</li>
-              <li data-value="04 — Venere">04 — Venere</li>
-              <li data-value="05 — Corvo">05 — Corvo</li>
-              <li data-value="06 — Obsidian Wing">06 — Obsidian Wing</li>
-              <li data-value="Caldera — pezzo unico">Caldera — pezzo unico</li>
-            </ul>
-          </div>
+        <div data-reveal>
+          <h3>Il mestiere</h3>
+          <p>Ogni abito nasce da un disegno a matita, poi da un cartamodello in carta nera, poi da settimane di lavorazione — piuma per piuma, cucitura per cucitura, sullo stesso tavolo da taglio del 1928, ancora segnato dalle forbici di Adele.</p>
+          <p>Meno di venti abiti l'anno, ciascuno numerato a mano sull'etichetta interna. Nessuna produzione in serie, nessuna replica: il numero uno di ogni modello è anche l'ultimo.</p>
         </div>
-        <div class="prenota-field">
-          <span class="prenota-label">Giorno preferito</span>
-          <div class="prenota-calendar" data-prenota-calendar>
-            <div class="prenota-cal-head">
-              <button type="button" class="prenota-cal-nav" data-cal-prev aria-label="Mese precedente">‹</button>
-              <span data-cal-month></span>
-              <button type="button" class="prenota-cal-nav" data-cal-next aria-label="Mese successivo">›</button>
-            </div>
-            <div class="prenota-cal-dow">
-              <span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span>
-            </div>
-            <div class="prenota-cal-grid" data-cal-grid></div>
-          </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-label="L'atelier al lavoro">
+      <div class="gallery">
+        <figure style="--ar:1.5" data-reveal><img src="assets/storia-sewing.webp" alt="Mani che cuciono un abito Ossidiana" loading="lazy" width="1920" height="1280"></figure>
+        <figure style="--ar:1.5" data-reveal><img src="assets/storia-swatches.webp" alt="Materiali dell'atelier: piuma, velluto, raso e seta neri" loading="lazy" width="1920" height="1280"></figure>
+        <figure style="--ar:1.7778" data-reveal><img src="assets/storia-label.webp" alt="L'etichetta Ossidiana, cucita a mano su ogni capo" loading="lazy" width="2048" height="1152"></figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="clienti-title">
+      <div class="narrow">
+        <div class="block-head" data-reveal>
+          <span class="label">Clienti dell'atelier</span>
+          <h2 class="title" id="clienti-title">Chi ci ha vestito.</h2>
         </div>
-        <label class="prenota-field"><span>Messaggio <span class="prenota-optional">(opzionale)</span></span><textarea name="messaggio" rows="3"></textarea></label>
-        <button type="submit" class="btn btn-accent">Invia richiesta</button>
-      </form>
-    </div>
-  </div>
+        <div class="reviews">
+          <figure class="review" data-reveal><blockquote>Sono entrata con l’idea di un vestito, sono uscita con l’idea di un abito diverso da quello che avevo in testa. Meglio.</blockquote><figcaption>Claudia B. — Milano</figcaption></figure>
+          <figure class="review" data-reveal><blockquote>Ho pianto la prima volta che me lo sono provato davanti allo specchio dell’atelier. Non me lo aspettavo.</blockquote><figcaption>Sofia R. — Torino</figcaption></figure>
+          <figure class="review" data-reveal><blockquote>Ho aspettato otto mesi per Obsidian Wing. Non l’ho rimpianto un solo giorno.</blockquote><figcaption>Alessandra — Roma</figcaption></figure>
+          <figure class="review" data-reveal><blockquote>Mi hanno chiesto che rumore fa la mia voce quando sono felice, non solo le misure. È lì che ho capito che non era un negozio.</blockquote><figcaption>Elena F. — Milano</figcaption></figure>
+          <figure class="review" data-reveal><blockquote>L’ho indossato al matrimonio di mio fratello. Mia madre non riconosceva il tessuto: pensava fosse un vestito suo, di quando era giovane.</blockquote><figcaption>Giulia — Napoli</figcaption></figure>
+          <figure class="review" data-reveal><blockquote>Non un abito comprato — un abito ascoltato.</blockquote><figcaption>Marta — Milano</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Info modal (guida taglie, termini, privacy, cookie) -->
-  <div class="info-modal" data-info-modal>
-    <div class="prenota-modal-bg" data-info-modal-bg></div>
-    <div class="prenota-modal-panel info-modal-panel" data-info-modal-panel>
-      <a href="#" class="prenota-modal-close" data-info-modal-close>Chiudi ✕</a>
-      <div class="eyebrow eyebrow-mono" data-info-eyebrow><span class="eyebrow-rule"></span></div>
-      <h2 data-info-title></h2>
-      <div class="info-body" data-info-body></div>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">OSSIDIANA</div>
-        <div class="footer-newsletter">
-          <div class="footer-newsletter-title">Lettere dall'atelier</div>
-          <form class="newsletter-form" data-newsletter-form>
-            <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
-            <button type="submit">Iscriviti</button>
-          </form>
-        </div>
+        <div class="newsletter-title">Lettere dall'atelier</div>
+        <form class="newsletter-form" data-newsletter-form>
+          <input type="email" name="email" placeholder="La tua email" required aria-label="La tua email">
+          <button type="submit">Iscriviti</button>
+        </form>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Assistenza</div>
-        <a href="#" data-info-open="taglie">Guida alle taglie</a>
-        <a href="#" data-prenota-open>Contatti</a>
+        <span class="label">Assistenza</span>
+        <button type="button" data-prenota>Prenota una prova</button>
+        <button type="button" data-info="taglie">Guida alle taglie</button>
+        <a href="tel:+390287345521">+39 02 8734 5521</a>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Il brand</div>
-        <a href="index.html#manifesto" class="nav-manifesto-desktop" data-goto-page="index.html#manifesto" data-label="Manifesto">Manifesto</a>
-        <a href="manifesto.html" class="nav-manifesto-mobile" data-goto-page="manifesto.html" data-label="Manifesto">Manifesto</a>
-        <a href="storia.html" class="is-current" aria-current="page">Storia</a>
-        <a href="index.html#atelier" data-goto-page="index.html#atelier" data-label="Atelier">Atelier</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <span class="label">La maison</span>
+        <a href="index.html#collezione">Collezione</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="storia.html">Storia</a>
+        <a href="#" rel="noopener">Instagram</a>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Legale</div>
-        <a href="#" data-info-open="termini">Termini e condizioni</a>
-        <a href="#" data-info-open="privacy">Privacy policy</a>
-        <a href="#" data-info-open="cookie">Cookie policy</a>
+        <span class="label">Legale</span>
+        <button type="button" data-info="termini">Termini e condizioni</button>
+        <button type="button" data-info="privacy">Privacy policy</button>
+        <button type="button" data-info="cookie">Cookie policy</button>
       </div>
     </div>
-    <div class="footer-divider"></div>
     <div class="footer-bottom">
       <span>© 2026 Ossidiana S.r.l.</span>
       <span>Via Borgonuovo · 20121 Milano (MI) · P.IVA IT 12345678901 · REA MI-2284591</span>
     </div>
   </footer>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
 </html>
