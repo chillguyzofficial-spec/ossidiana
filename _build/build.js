@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const V = { css: 39, js: 14 }; // cache-busting: alza quando cambi css/js
+const V = { css: 39, js: 15 }; // cache-busting: alza quando cambi css/js
 
 const looks = [
   ['01', 'Ombra', 'Tessuto opaco · spalle scolpite', '€ 390'],

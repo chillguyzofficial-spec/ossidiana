@@ -66,14 +66,14 @@
 
   const MONTHS_IT = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
 
-  /* ---------- Scroll lock (iOS ignora overflow:hidden sul solo body) ---------- */
+  /* ---------- Scroll lock: overflow solo su html ---------- */
 
   let locks = 0;
   function lockScroll(on) {
     locks = Math.max(0, locks + (on ? 1 : -1));
     const v = locks > 0 ? 'hidden' : '';
     document.documentElement.style.overflow = v;
-    document.body.style.overflow = v;
+    // NON anche sul body: diventerebbe un contenitore di scorrimento e l'header sticky tornerebbe in cima alla pagina (menu sparito a metà pagina)
   }
 
   /* ---------- Finestre ---------- */
